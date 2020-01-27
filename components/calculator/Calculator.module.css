@@ -1,0 +1,63 @@
+.container, .altContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.altContainer {
+	box-shadow: 5px 5px 9px rgba(54, 84, 170, 0.200), -6px -6px 8px rgba(255, 255, 255) !important;
+}
+
+.underline {
+	outline: none;
+
+	border-bottom: 2px solid white;
+	border-radius: 2px;
+	width: 80px;
+	height: 100%;
+}
+
+.input {
+	border: 0;
+	background: transparent;
+	outline: none;
+	width: 100%;
+	text-align: center;
+	margin-left: -1px;
+	font-family: 'AcquaticaFont';
+	color: rgba(0, 0, 0, 0.800);
+	margin-bottom: 2px;
+	margin-left: 1px;
+}
+
+.input::placeholder {
+	color: rgb(206, 208, 221);
+	font-family: 'AcquaticaFont';
+	font-size: 9px;
+}
+
+.arrowAndStreams {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 120px;
+}
+
+.arrow {
+	background: url('../../assets/images/arrow.svg');
+	height: 16px;
+	width: 16px;
+	animation: slide 3s infinite;
+}
+
+.invisibleArrow {
+	visibility: hidden;
+}
+
+@keyframes slide {
+	to {
+		transform: translateX(100%);
+		fill: red;
+		opacity: 0;
+	}
+}

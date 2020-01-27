@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'AcquaticaFont';
+    src: url('../assets/fonts/Aquatico-Regular.otf') format("opentype");
+  }
+
+
+.page {
+    margin: 32px 20px;
+    font-family: 'AcquaticaFont';
+    font-size: 12px;
+    box-sizing: border-box;
+
+}
+
+
+.container {
+    padding: 24px 24px;
+
+    border: 1px solid white;
+    box-shadow: 0 4px 14px 0 rgba(128, 128, 128, 0.164);
+    background: #f9fbfe;
+    border-radius: 4px;
+    max-width: 620px;
+    margin:auto;
+    animation: mymove 5s infinite;
+
+    color: rgba(0, 0, 0, 0.800);
+}
+
+
+
+@keyframes mymove {
+    0% {box-shadow: 0 4px 15px 0 rgba(211, 211, 211, 0.445)}
+    50% {box-shadow: 4px 6px 15px 0 rgba(133, 228, 198, 0.240), -4px -3px 15px 0 rgba(133, 228, 198, 0.150) }
+    100% {box-shadow: 0 4px 15px 0 rgba(211, 211, 211, 0.445)}
+}
+
+.header {
+    margin-bottom: 28px;
+}
+
+.streamingsContainer > * {
+    padding: 5px 8px;
+
+    background: rgba(241,243,246, 0.700);
+    box-shadow: 5px 5px 14px rgba(54, 84, 170, 0.100), -5px -5px 14px rgba(255, 255, 255);
+    border-radius: 4px;
+
+    margin-bottom: 28px;
+
+}
+
+.streamingsContainer > * + * {
+    margin-top: 16px;
+}
+
+@media (min-width: 1024px) {
+    .page {
+        margin: 32px 80px;
+        /* position: absolute;
+        width: 100%;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%); */
+    }
+
+    .container {
+        padding: 24px 30px;
+    }
+    
+    .streamingsContainer > * {
+        padding: 5px 10px;
+    }
+    
+}

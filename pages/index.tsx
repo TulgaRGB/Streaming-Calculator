@@ -1,0 +1,93 @@
+import { Result } from '../components/result/Result';
+import { Calculator } from '../components/calculator/Calculator';
+import { Header } from '../components/header/Header';
+import React, { useState } from 'react';
+import Head from 'next/head';
+
+import styles from './index.module.css';
+
+interface Props {}
+
+interface State {
+	total: number;
+	streamingServices: { name: string; rate: number; count: number }[];
+}
+
+export default class Home extends React.PureComponent<Props, State> {
+	constructor(props: Props) {
+		super(props);
+		this.state = { total: 0, streamingServices: streamingServices };
+	}
+
+	public render(): React.ReactNode {
+		const calculateTotal = () => {
+			let currentTotal = 0;
+			this.state.streamingServices.forEach((streaming) => {
+				currentTotal += streaming.count * streaming.rate;
+			});
+			this.setState({ total: currentTotal });
+		};
+
+		return (
+			<div className={styles.page}>
+				<head>
+					<title>The streaming salary calculator</title>
+					<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
+                    <meta name="description" content="Modern tool to give you information about your streaming earning. Choose all your platforms and
+						get your informations."/>
+				</head>
+				<div className={styles.container}>
+					<div className={styles.header}>
+						<Header />
+					</div>
+					<div className={styles.streamingsContainer}>
+						{streamingServices.map((streaming) => (
+							<div key={streaming.name}>
+								<Calculator streaming={streaming} calculateTotal={calculateTotal} />
+							</div>
+						))}
+					</div>
+					<Result totalResult={this.state.total} />
+				</div>
+			</div>
+		);
+	}
+}
+
+const streamingServices: { name: string; rate: number; count: number }[] = [
+	{
+		name: 'Spotify',
+		rate: 0.00437,
+		count: 0
+	},
+	{
+		name: 'Apple Music',
+		rate: 0.00735,
+		count: 0
+	},
+	{
+		name: 'Tidal',
+		rate: 0.0125,
+		count: 0
+	},
+	{
+		name: 'Deezer',
+		rate: 0.0064,
+		count: 0
+	},
+	{
+		name: 'Napster',
+		rate: 0.019,
+		count: 0
+	},
+	{
+		name: 'Pandora',
+		rate: 0.00133,
+		count: 0
+	},
+	{
+		name: 'Amazon Music',
+		rate: 0.00437,
+		count: 0
+	}
+];

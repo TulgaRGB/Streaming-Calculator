@@ -1,0 +1,22 @@
+
+.outerContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    letter-spacing: 0.3px;
+        text-align: center;
+}
+
+.image {
+    background: url('../../assets/images/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:auto;
+    height: 190px;
+    width: 190px;
+    margin-top: -50px;
+    margin-bottom: -50px;
+}
