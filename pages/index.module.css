@@ -9,7 +9,6 @@
     font-family: 'AcquaticaFont';
     font-size: 12px;
     box-sizing: border-box;
-
 }
 
 
@@ -42,8 +41,6 @@
 .streamingsContainer > * {
     padding: 5px 8px;
 
-    background: rgba(241,243,246, 0.700);
-    box-shadow: 5px 5px 14px rgba(54, 84, 170, 0.100), -5px -5px 14px rgba(255, 255, 255);
     border-radius: 4px;
 
     margin-bottom: 28px;

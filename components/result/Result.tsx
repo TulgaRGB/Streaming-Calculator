@@ -8,7 +8,7 @@ interface Props {
 export function Result(props:Props): React.ReactElement {
     return (
         <div className={styles.container}>
-            You Earn: {props.totalResult.toFixed(2)}€
+            You Earn: {props.totalResult.toFixed(2)}$
         </div>
     )
 }

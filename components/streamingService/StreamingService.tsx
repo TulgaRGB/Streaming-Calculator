@@ -30,7 +30,7 @@ export function StreamingService(props: Props): React.ReactElement{
     }
 
     return(
-        <div className={count === undefined || count === '' ? styles.container : styles.altContainer }>
+        <div className={count === undefined || count === '' ? styles.container : styles.altContainer}>
             {props.streaming.name}
             <div className={styles.arrowAndStreams}>
                 <div className={count === undefined || count === '' ? styles.arrow : styles.invisibleArrow}/>

@@ -40,9 +40,7 @@ export default class Home extends React.PureComponent<void,  State> {
 					</div>
 					<div className={styles.streamingsContainer}>
 						{streamingServices.map((streaming) => (
-							<div key={streaming.name}>
-								<StreamingService streaming={streaming} calculateTotal={calculateTotal} />
-							</div>
+							<StreamingService streaming={streaming} calculateTotal={calculateTotal} key={streaming.name} />
 						))}
 					</div>
 					<Result totalResult={this.state.total} />

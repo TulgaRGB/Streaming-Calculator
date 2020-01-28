@@ -2,10 +2,12 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	box-shadow: 5px 5px 14px rgba(54, 84, 170, 0.100), -5px -5px 14px rgb(255, 255, 255);
+	background: rgba(241,243,246, 0.700);
 }
 
 .altContainer {
-	box-shadow: 5px 5px 9px rgba(54, 84, 170, 0.200), -6px -6px 8px rgba(255, 255, 255) !important;
+	box-shadow: 5px 5px 9px rgba(54, 84, 170, 0.200), -6px -6px 8px rgb(255, 255, 255);
 }
 
 .underline {

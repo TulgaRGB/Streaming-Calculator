@@ -1,0 +1,32 @@
+webpackHotUpdate("static/development/pages/index.js",{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./components/streamingService/StreamingService.module.css":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-2-1!./node_modules/postcss-loader/src??__nextjs_postcss!./components/streamingService/StreamingService.module.css ***!
+  \*****************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
+// Imports
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+var ___CSS_LOADER_URL_PURE_IMPORT_0___ = __webpack_require__(/*! ../../public/assets/images/arrow.svg */ "./public/assets/images/arrow.svg");
+var ___CSS_LOADER_URL_IMPORT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_PURE_IMPORT_0___);
+// Module
+exports.push([module.i, ".StreamingService_container__2_LDb, .StreamingService_altContainer__2Lt-Y {\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n\tbox-shadow: 5px 5px 14px rgba(54, 84, 170, 0.100), -5px -5px 14px rgb(255, 255, 255);\n\tbackground: rgba(241,243,246, 0.700);\n}\n\n.StreamingService_altContainer__2Lt-Y {\n\tbox-shadow: 5px 5px 9px rgba(54, 84, 170, 0.200), -6px -6px 8px rgb(255, 255, 255);\n}\n\n.StreamingService_underline__1Gxxe {\n\toutline: none;\n\n\tborder-bottom: 2px solid white;\n\tborder-radius: 2px;\n\twidth: 80px;\n\theight: 100%;\n}\n\n.StreamingService_input__2M1xR {\n\tborder: 0;\n\tbackground: transparent;\n\toutline: none;\n\twidth: 100%;\n\ttext-align: center;\n\tfont-family: 'AcquaticaFont';\n\tcolor: rgba(0, 0, 0, 0.800);\n\tmargin-bottom: 2px;\n\tmargin-left: 1px;\n}\n\n.StreamingService_input__2M1xR::-webkit-input-placeholder {\n\tcolor: rgb(206, 208, 221);\n\tfont-family: 'AcquaticaFont';\n\tfont-size: 9px;\n}\n\n.StreamingService_input__2M1xR::-moz-placeholder {\n\tcolor: rgb(206, 208, 221);\n\tfont-family: 'AcquaticaFont';\n\tfont-size: 9px;\n}\n\n.StreamingService_input__2M1xR:-ms-input-placeholder {\n\tcolor: rgb(206, 208, 221);\n\tfont-family: 'AcquaticaFont';\n\tfont-size: 9px;\n}\n\n.StreamingService_input__2M1xR::-ms-input-placeholder {\n\tcolor: rgb(206, 208, 221);\n\tfont-family: 'AcquaticaFont';\n\tfont-size: 9px;\n}\n\n.StreamingService_input__2M1xR::placeholder {\n\tcolor: rgb(206, 208, 221);\n\tfont-family: 'AcquaticaFont';\n\tfont-size: 9px;\n}\n\n.StreamingService_arrowAndStreams__3gI9W {\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n\twidth: 120px;\n}\n\n.StreamingService_arrow__2fgh6 {\n\tbackground: url(" + ___CSS_LOADER_URL_IMPORT_0___ + ");\n\theight: 16px;\n\twidth: 16px;\n\t-webkit-animation: StreamingService_slide__2bXW3 3s infinite;\n\t        animation: StreamingService_slide__2bXW3 3s infinite;\n}\n\n.StreamingService_invisibleArrow__Gqbbn {\n\tvisibility: hidden;\n}\n\n@-webkit-keyframes StreamingService_slide__2bXW3 {\n\tto {\n\t\t-webkit-transform: translateX(100%);\n\t\t        transform: translateX(100%);\n\t\tfill: red;\n\t\topacity: 0;\n\t}\n}\n\n@keyframes StreamingService_slide__2bXW3 {\n\tto {\n\t\t-webkit-transform: translateX(100%);\n\t\t        transform: translateX(100%);\n\t\tfill: red;\n\t\topacity: 0;\n\t}\n}\n", "",{"version":3,"sources":["StreamingService.module.css"],"names":[],"mappings":"AAAA;CACC,aAAa;CACb,8BAA8B;CAC9B,mBAAmB;CACnB,oFAAoF;CACpF,oCAAoC;AACrC;;AAEA;CACC,kFAAkF;AACnF;;AAEA;CACC,aAAa;;CAEb,8BAA8B;CAC9B,kBAAkB;CAClB,WAAW;CACX,YAAY;AACb;;AAEA;CACC,SAAS;CACT,uBAAuB;CACvB,aAAa;CACb,WAAW;CACX,kBAAkB;CAClB,4BAA4B;CAC5B,2BAA2B;CAC3B,kBAAkB;CAClB,gBAAgB;AACjB;;AAEA;CACC,yBAAyB;CACzB,4BAA4B;CAC5B,cAAc;AACf;;AAJA;CACC,yBAAyB;CACzB,4BAA4B;CAC5B,cAAc;AACf;;AAJA;CACC,yBAAyB;CACzB,4BAA4B;CAC5B,cAAc;AACf;;AAJA;CACC,yBAAyB;CACzB,4BAA4B;CAC5B,cAAc;AACf;;AAJA;CACC,yBAAyB;CACzB,4BAA4B;CAC5B,cAAc;AACf;;AAEA;CACC,aAAa;CACb,8BAA8B;CAC9B,mBAAmB;CACnB,YAAY;AACb;;AAEA;CACC,8CAAuD;CACvD,YAAY;CACZ,WAAW;CACX,4DAA4B;SAA5B,oDAA4B;AAC7B;;AAEA;CACC,kBAAkB;AACnB;;AAEA;CACC;EACC,mCAA2B;UAA3B,2BAA2B;EAC3B,SAAS;EACT,UAAU;CACX;AACD;;AANA;CACC;EACC,mCAA2B;UAA3B,2BAA2B;EAC3B,SAAS;EACT,UAAU;CACX;AACD","file":"StreamingService.module.css","sourcesContent":[".container, .altContainer {\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n\tbox-shadow: 5px 5px 14px rgba(54, 84, 170, 0.100), -5px -5px 14px rgb(255, 255, 255);\n\tbackground: rgba(241,243,246, 0.700);\n}\n\n.altContainer {\n\tbox-shadow: 5px 5px 9px rgba(54, 84, 170, 0.200), -6px -6px 8px rgb(255, 255, 255);\n}\n\n.underline {\n\toutline: none;\n\n\tborder-bottom: 2px solid white;\n\tborder-radius: 2px;\n\twidth: 80px;\n\theight: 100%;\n}\n\n.input {\n\tborder: 0;\n\tbackground: transparent;\n\toutline: none;\n\twidth: 100%;\n\ttext-align: center;\n\tfont-family: 'AcquaticaFont';\n\tcolor: rgba(0, 0, 0, 0.800);\n\tmargin-bottom: 2px;\n\tmargin-left: 1px;\n}\n\n.input::placeholder {\n\tcolor: rgb(206, 208, 221);\n\tfont-family: 'AcquaticaFont';\n\tfont-size: 9px;\n}\n\n.arrowAndStreams {\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n\twidth: 120px;\n}\n\n.arrow {\n\tbackground: url('../../public/assets/images/arrow.svg');\n\theight: 16px;\n\twidth: 16px;\n\tanimation: slide 3s infinite;\n}\n\n.invisibleArrow {\n\tvisibility: hidden;\n}\n\n@keyframes slide {\n\tto {\n\t\ttransform: translateX(100%);\n\t\tfill: red;\n\t\topacity: 0;\n\t}\n}\n"]}]);
+// Exports
+exports.locals = {
+	"container": "StreamingService_container__2_LDb",
+	"altContainer": "StreamingService_altContainer__2Lt-Y",
+	"underline": "StreamingService_underline__1Gxxe",
+	"input": "StreamingService_input__2M1xR",
+	"arrowAndStreams": "StreamingService_arrowAndStreams__3gI9W",
+	"arrow": "StreamingService_arrow__2fgh6",
+	"slide": "StreamingService_slide__2bXW3",
+	"invisibleArrow": "StreamingService_invisibleArrow__Gqbbn"
+};
+
+/***/ })
+
+})
+//# sourceMappingURL=index.js.8d5e6e85398e464857b6.hot-update.js.map
