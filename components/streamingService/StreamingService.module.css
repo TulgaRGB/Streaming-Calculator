@@ -23,7 +23,6 @@
 	outline: none;
 	width: 100%;
 	text-align: center;
-	margin-left: -1px;
 	font-family: 'AcquaticaFont';
 	color: rgba(0, 0, 0, 0.800);
 	margin-bottom: 2px;
@@ -44,7 +43,7 @@
 }
 
 .arrow {
-	background: url('../../assets/images/arrow.svg');
+	background: url('../../public/assets/images/arrow.svg');
 	height: 16px;
 	width: 16px;
 	animation: slide 3s infinite;

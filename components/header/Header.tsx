@@ -5,7 +5,6 @@ export  function Header(): React.ReactElement {
     return (
         <div className={styles.outerContainer}>
             <div className={styles.image}></div>
-   
         </div>
     )
 }

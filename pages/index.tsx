@@ -1,23 +1,21 @@
-import { Result } from '../components/result/Result';
-import { Calculator } from '../components/calculator/Calculator';
-import { Header } from '../components/header/Header';
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 
-import styles from './index.module.css';
+import { Result } from '../components/result/Result';
+import { StreamingService } from '../components/streamingService/StreamingService';
+import { Header } from '../components/header/Header';
 
-interface Props {}
+import styles from './index.module.css';
 
 interface State {
 	total: number;
 	streamingServices: { name: string; rate: number; count: number }[];
 }
 
-export default class Home extends React.PureComponent<Props, State> {
-	constructor(props: Props) {
-		super(props);
-		this.state = { total: 0, streamingServices: streamingServices };
-	}
+export default class Home extends React.PureComponent<void,  State> {
+	state = {
+		total: 0, streamingServices: streamingServices
+	};
 
 	public render(): React.ReactNode {
 		const calculateTotal = () => {
@@ -30,12 +28,12 @@ export default class Home extends React.PureComponent<Props, State> {
 
 		return (
 			<div className={styles.page}>
-				<head>
+				<Head>
 					<title>The streaming salary calculator</title>
 					<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
                     <meta name="description" content="Modern tool to give you information about your streaming earning. Choose all your platforms and
 						get your informations."/>
-				</head>
+				</Head>
 				<div className={styles.container}>
 					<div className={styles.header}>
 						<Header />
@@ -43,7 +41,7 @@ export default class Home extends React.PureComponent<Props, State> {
 					<div className={styles.streamingsContainer}>
 						{streamingServices.map((streaming) => (
 							<div key={streaming.name}>
-								<Calculator streaming={streaming} calculateTotal={calculateTotal} />
+								<StreamingService streaming={streaming} calculateTotal={calculateTotal} />
 							</div>
 						))}
 					</div>

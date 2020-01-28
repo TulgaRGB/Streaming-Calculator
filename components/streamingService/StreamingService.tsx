@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
-import styles from './Calculator.module.css';
-import classNames from 'classnames';
+import { useState } from 'react';
+import styles from './StreamingService.module.css';
+// import classNames from 'classnames';
 
 interface Props {
     streaming: {
@@ -12,9 +12,7 @@ interface Props {
     calculateTotal: () => void
 }
 
-
-export function Calculator(props: Props): React.ReactElement{
-
+export function StreamingService(props: Props): React.ReactElement{
     const [count, setCount] = useState();
 
     function handleChange(value: string): void {
@@ -30,8 +28,6 @@ export function Calculator(props: Props): React.ReactElement{
         props.streaming.count = Number(value);
         props.calculateTotal();
     }
-
-    const classname = classNames({"container": count=== undefined, "altContainer": count!==undefined });
 
     return(
         <div className={count === undefined || count === '' ? styles.container : styles.altContainer }>
