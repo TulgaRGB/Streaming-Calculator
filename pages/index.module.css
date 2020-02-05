@@ -51,6 +51,10 @@
     margin-top: 16px;
 }
 
+.link {
+    cursor: pointer;
+}
+
 @media (min-width: 1024px) {
     .page {
         margin: 32px 80px;

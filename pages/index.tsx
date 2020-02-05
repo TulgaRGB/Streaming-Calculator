@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-
+import Link from 'next/link';
 import { Result } from '../components/result/Result';
 import { StreamingService } from '../components/streamingService/StreamingService';
 import { Header } from '../components/header/Header';
@@ -43,7 +43,9 @@ export default class Home extends React.PureComponent<void,  State> {
 							<StreamingService streaming={streaming} calculateTotal={calculateTotal} key={streaming.name} />
 						))}
 					</div>
-					<Result totalResult={this.state.total} />
+					<div className={styles.link}>
+						<Result totalResult={this.state.total.toFixed(2)}  href={"/results"}/>
+					</div>
 				</div>
 			</div>
 		);

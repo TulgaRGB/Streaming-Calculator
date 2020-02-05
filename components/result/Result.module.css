@@ -21,6 +21,11 @@
     animation: coloranimation 5s infinite, fadein 4s linear;
 }
 
+.anchor {
+    text-decoration: none;
+    color: inherit;
+}
+
 @media (min-height: 730px){
     .container {
         position: static;

@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport * as React from 'react';\nimport styles from './Result.module.css';\nexport function Result(props) {\n  return __jsx(\"div\", {\n    className: styles.container\n  }, \"You Earn: \", props.totalResult, \"$\");\n}","map":null,"metadata":{},"sourceType":"module"}
