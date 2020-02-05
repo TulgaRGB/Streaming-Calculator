@@ -24,10 +24,6 @@
     "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/results": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }

@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+
 import { Result } from '../components/result/Result';
 import { StreamingService } from '../components/streamingService/StreamingService';
 import { Header } from '../components/header/Header';
+
+import { useContext } from 'react';
 
 import styles from './index.module.css';
 
@@ -12,47 +15,7 @@ interface State {
 	streamingServices: { name: string; rate: number; count: number }[];
 }
 
-export default class Home extends React.PureComponent<void,  State> {
-	state = {
-		total: 0, streamingServices: streamingServices
-	};
-
-	public render(): React.ReactNode {
-		const calculateTotal = () => {
-			let currentTotal = 0;
-			this.state.streamingServices.forEach((streaming) => {
-				currentTotal += streaming.count * streaming.rate;
-			});
-			this.setState({ total: currentTotal });
-		};
-
-		return (
-			<div className={styles.page}>
-				<Head>
-					<title>The streaming salary calculator</title>
-					<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
-                    <meta name="description" content="Modern tool to give you information about your streaming earning. Choose all your platforms and
-						get your informations."/>
-				</Head>
-				<div className={styles.container}>
-					<div className={styles.header}>
-						<Header />
-					</div>
-					<div className={styles.streamingsContainer}>
-						{streamingServices.map((streaming) => (
-							<StreamingService streaming={streaming} calculateTotal={calculateTotal} key={streaming.name} />
-						))}
-					</div>
-					<div className={styles.link}>
-						<Result totalResult={this.state.total.toFixed(2)}  href={"/results"}/>
-					</div>
-				</div>
-			</div>
-		);
-	}
-}
-
-const streamingServices: { name: string; rate: number; count: number }[] = [
+const streamingServicesSample: { name: string; rate: number; count: number }[] = [
 	{
 		name: 'Spotify',
 		rate: 0.00437,
@@ -89,3 +52,45 @@ const streamingServices: { name: string; rate: number; count: number }[] = [
 		count: 0
 	}
 ];
+
+
+export default function Home(state:State): React.ReactNode {
+
+
+	const [ total, setTotal ] = useState(0);
+	const [ streamingServices, setStreamingService ] = useState(streamingServicesSample);
+
+
+	const calculateTotal = () => {
+		let currentTotal = 0;
+		streamingServices.forEach((streaming) => {
+			currentTotal += streaming.count * streaming.rate;
+		});
+		setTotal(currentTotal);
+	};
+
+	return (
+		<div className={styles.page}>
+			<Head>
+				<title>The streaming salary calculator</title>
+				<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
+				<meta name="description" content="Modern tool to give you information about your streaming earning. Choose all your platforms and
+					get your informations."/>
+			</Head>
+			<div className={styles.container}>
+				<div className={styles.header}>
+					<Header />
+				</div>
+				<div className={styles.streamingsContainer}>
+					{streamingServices.map((streaming) => (
+						<StreamingService streaming={streaming} calculateTotal={calculateTotal} key={streaming.name} />
+					))}
+				</div>
+				<div className={styles.link}>
+					<Result totalResult={total.toFixed(2)}  href={"/results"}/>
+				</div>
+			</div>
+		</div>
+	);
+}
+

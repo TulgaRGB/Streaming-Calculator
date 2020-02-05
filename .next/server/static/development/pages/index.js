@@ -2028,126 +2028,12 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/coding/next-ts/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
 
-
-
-class Home extends react__WEBPACK_IMPORTED_MODULE_0___default.a.PureComponent {
-  constructor(...args) {
-    super(...args);
-
-    _defineProperty(this, "state", {
-      total: 0,
-      streamingServices: streamingServices
-    });
-  }
-
-  render() {
-    const calculateTotal = () => {
-      let currentTotal = 0;
-      this.state.streamingServices.forEach(streaming => {
-        currentTotal += streaming.count * streaming.rate;
-      });
-      this.setState({
-        total: currentTotal
-      });
-    };
-
-    return __jsx("div", {
-      className: _index_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.page,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 30
-      },
-      __self: this
-    }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 31
-      },
-      __self: this
-    }, __jsx("title", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 32
-      },
-      __self: this
-    }, "The streaming salary calculator"), __jsx("meta", {
-      name: "viewport",
-      content: "initial-scale=1.0, maximum-scale=1.0",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 33
-      },
-      __self: this
-    }), __jsx("meta", {
-      name: "description",
-      content: "Modern tool to give you information about your streaming earning. Choose all your platforms and get your informations.",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 34
-      },
-      __self: this
-    })), __jsx("div", {
-      className: _index_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.container,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37
-      },
-      __self: this
-    }, __jsx("div", {
-      className: _index_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.header,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 38
-      },
-      __self: this
-    }, __jsx(_components_header_Header__WEBPACK_IMPORTED_MODULE_4__["Header"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 39
-      },
-      __self: this
-    })), __jsx("div", {
-      className: _index_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.streamingsContainer,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 41
-      },
-      __self: this
-    }, streamingServices.map(streaming => __jsx(_components_streamingService_StreamingService__WEBPACK_IMPORTED_MODULE_3__["StreamingService"], {
-      streaming: streaming,
-      calculateTotal: calculateTotal,
-      key: streaming.name,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43
-      },
-      __self: this
-    }))), __jsx("div", {
-      className: _index_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.link,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46
-      },
-      __self: this
-    }, __jsx(_components_result_Result__WEBPACK_IMPORTED_MODULE_2__["Result"], {
-      totalResult: this.state.total.toFixed(2),
-      href: "/results",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 47
-      },
-      __self: this
-    }))));
-  }
-
-}
-const streamingServices = [{
+const streamingServicesSample = [{
   name: 'Spotify',
   rate: 0.00437,
   count: 0
@@ -2176,6 +2062,112 @@ const streamingServices = [{
   rate: 0.00437,
   count: 0
 }];
+function Home(state) {
+  const {
+    0: total,
+    1: setTotal
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  const {
+    0: streamingServices,
+    1: setStreamingService
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(streamingServicesSample);
+
+  const calculateTotal = () => {
+    let currentTotal = 0;
+    streamingServices.forEach(streaming => {
+      currentTotal += streaming.count * streaming.rate;
+    });
+    setTotal(currentTotal);
+  };
+
+  return __jsx("div", {
+    className: _index_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.page,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: this
+  }, __jsx("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, "The streaming salary calculator"), __jsx("meta", {
+    name: "viewport",
+    content: "initial-scale=1.0, maximum-scale=1.0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  }), __jsx("meta", {
+    name: "description",
+    content: "Modern tool to give you information about your streaming earning. Choose all your platforms and get your informations.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
+  })), __jsx("div", {
+    className: _index_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.container,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, __jsx("div", {
+    className: _index_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.header,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: this
+  }, __jsx(_components_header_Header__WEBPACK_IMPORTED_MODULE_4__["Header"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: this
+  })), __jsx("div", {
+    className: _index_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.streamingsContainer,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, streamingServices.map(streaming => __jsx(_components_streamingService_StreamingService__WEBPACK_IMPORTED_MODULE_3__["StreamingService"], {
+    streaming: streaming,
+    calculateTotal: calculateTotal,
+    key: streaming.name,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: this
+  }))), __jsx("div", {
+    className: _index_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.link,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: this
+  }, __jsx(_components_result_Result__WEBPACK_IMPORTED_MODULE_2__["Result"], {
+    totalResult: total.toFixed(2),
+    href: "/results",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: this
+  }))));
+}
 
 /***/ }),
 
