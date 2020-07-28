@@ -2,12 +2,11 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	box-shadow: 5px 5px 14px rgba(54, 84, 170, 0.100), -5px -5px 14px rgb(255, 255, 255);
-	background: rgba(241,243,246, 0.700);
+	background: rgb(37, 36, 41);
 }
 
 .altContainer {
-	box-shadow: 5px 5px 9px rgba(54, 84, 170, 0.200), -6px -6px 8px rgb(255, 255, 255);
+	border: 1px solid #85E4C6;
 }
 
 .underline {
@@ -15,7 +14,7 @@
 
 	border-bottom: 2px solid white;
 	border-radius: 2px;
-	width: 80px;
+	width: 120px;
 	height: 100%;
 }
 
@@ -25,35 +24,19 @@
 	outline: none;
 	width: 100%;
 	text-align: center;
-	font-family: 'AcquaticaFont';
-	color: rgba(0, 0, 0, 0.800);
+	color: white;
 	margin-bottom: 2px;
 	margin-left: 1px;
+	font-size: inherit;
 }
 
 .input::placeholder {
-	color: rgb(206, 208, 221);
+	color: white;
 	font-family: 'AcquaticaFont';
-	font-size: 9px;
+	font-size: 14px;
 }
 
-.arrowAndStreams {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 120px;
-}
 
-.arrow {
-	background: url('../../public/assets/images/arrow.svg');
-	height: 16px;
-	width: 16px;
-	animation: slide 3s infinite;
-}
-
-.invisibleArrow {
-	visibility: hidden;
-}
 
 @keyframes slide {
 	to {

@@ -3,7 +3,7 @@
     padding: 5px 10px;
     width: fit-content;
     margin: auto;
-    font-size: 14px;
+    font-size: 21px;
     background: #85E4C6;
     position: fixed;
     width: 100vh;
@@ -23,7 +23,7 @@
 
 .anchor {
     text-decoration: none;
-    color: inherit;
+    color: black;
 }
 
 @media (min-height: 730px){

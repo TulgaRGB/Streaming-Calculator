@@ -32,12 +32,9 @@ export function StreamingService(props: Props): React.ReactElement{
     return(
         <div className={count === undefined || count === '' ? styles.container : styles.altContainer}>
             {props.streaming.name}
-            <div className={styles.arrowAndStreams}>
-                <div className={count === undefined || count === '' ? styles.arrow : styles.invisibleArrow}/>
                 <div className={styles.underline}>
                     <input placeholder="N. of streams" className={styles.input} value={count} onChange={(event) => handleChange(event.target.value)}/>
                 </div>
-            </div>
         </div>
     );
 }

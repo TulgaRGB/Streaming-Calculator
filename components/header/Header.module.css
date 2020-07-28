@@ -4,15 +4,24 @@
     flex-direction: column;
 }
 
+.header {
+    margin-top: 6px;
+    font-family: inherit;
+    color: #83e4c6;
+    text-align: center;
+    letter-spacing: 0.4px;
+}
+
 .container {
     letter-spacing: 0.3px;
-        text-align: center;
+    text-align: center;
 }
 
 .image {
-    background: url('../../public/assets/images/logo.png') no-repeat;
-    background-size: cover;
-    height: 190px;
-    width: 190px;
-    margin: -50px auto;
+    background: url('../../public/assets/images/logo.png') no-repeat ;
+    background-size: contain;
+    height: 130px;
+    width: 250px;
+    margin: -12px auto;
 }
+

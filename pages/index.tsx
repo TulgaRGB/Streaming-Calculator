@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-
 import { Result } from '../components/result/Result';
 import { StreamingService } from '../components/streamingService/StreamingService';
 import { Header } from '../components/header/Header';
-
-import { useContext } from 'react';
-
 import styles from './index.module.css';
 
 interface State {

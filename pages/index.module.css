@@ -3,35 +3,32 @@
     src: url('../public/assets/fonts/Aquatico-Regular.otf') format("opentype");
   }
 
-
 .page {
-    margin: 32px 20px;
     font-family: 'AcquaticaFont';
-    font-size: 12px;
-    box-sizing: border-box;
+    font-size: 16px;
+    min-width: 90vw;
 }
 
-
 .container {
-    padding: 24px 24px;
+    padding: 32px 32px;
 
-    border: 1px solid white;
+    border: 1px solid rgba(128, 128, 128, 0.164);
     box-shadow: 0 4px 14px 0 rgba(128, 128, 128, 0.164);
-    background: #f9fbfe;
-    border-radius: 4px;
+    background: rgb(10, 10, 12);
+    border-radius: 8px;
     max-width: 620px;
     margin:auto;
     animation: mymove 5s infinite;
 
-    color: rgba(0, 0, 0, 0.800);
+    color: white;
 }
 
 
 
 @keyframes mymove {
-    0% {box-shadow: 0 4px 15px 0 rgba(211, 211, 211, 0.445)}
-    50% {box-shadow: 4px 6px 15px 0 rgba(133, 228, 198, 0.240), -4px -3px 15px 0 rgba(133, 228, 198, 0.150) }
-    100% {box-shadow: 0 4px 15px 0 rgba(211, 211, 211, 0.445)}
+    0% {box-shadow: 0 8px 15px 0 rgba(211, 211, 211, 0.445)}
+    50% {box-shadow: 4px 8px 15px 0 rgba(133, 228, 198, 0.240), -4px -3px 15px 0 rgba(133, 228, 198, 0.150) }
+    100% {box-shadow: 0 8px 15px 0 rgba(211, 211, 211, 0.445)}
 }
 
 .header {
@@ -39,12 +36,9 @@
 }
 
 .streamingsContainer > * {
-    padding: 5px 8px;
-
+    padding: 8px 12px;
     border-radius: 4px;
-
     margin-bottom: 28px;
-
 }
 
 .streamingsContainer > * + * {
@@ -57,7 +51,6 @@
 
 @media (min-width: 1024px) {
     .page {
-        margin: 32px 80px;
         /* position: absolute;
         width: 100%;
         left: 50%;
@@ -66,11 +59,11 @@
     }
 
     .container {
-        padding: 24px 30px;
+        padding: 32px 32px;
     }
-    
+
     .streamingsContainer > * {
-        padding: 5px 10px;
+        padding: 18px 18px;
     }
-    
+
 }
