@@ -1,47 +1,84 @@
 .container, .altContainer {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background: rgb(37, 36, 41);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(37, 36, 41);
+    letter-spacing: 1px;
+    box-shadow: 0 0 0 1px rgba(75, 193, 157, 0.19);
 }
 
 .altContainer {
-	border: 1px solid #85E4C6;
+    border: 1px solid #85E4C6;
 }
 
 .underline {
-	outline: none;
+    outline: none;
+    position: relative;
+    border-radius: 2px;
+    width: 140px;
+    height: 100%;
+}
 
-	border-bottom: 2px solid white;
-	border-radius: 2px;
-	width: 120px;
-	height: 100%;
+.underline::after {
+    content: "";
+    width: 140px;
+    position: absolute;
+    background-color: #85E4C6;
+    height: 2px;
+    transform: scaleX(0);
+    left: 50%;
+    margin-left: -68px;
+    transition: all 150ms ease-in-out;
+    bottom: 0;
+}
+
+.underline:hover::after, .underline:active::after, .underline:focus-within::after {
+    transform: scaleX(1);
+}
+
+.items > li::after {
+    content: "";
+    position: absolute;
+    bottom: 9px;
+    background-color: yellow;
+    left: -2px;
+    right: -2px;
+    height: 2px;
+    transform: scaleX(0);
+    transition: all 150ms ease-in-out;
+}
+
+.items > li:hover,
+.items > li > button:hover,
+.subsection > ul > li:hover::after,
+.items > li:hover::after {
+    cursor: pointer;
+    transform: scaleX(1);
 }
 
 .input {
-	border: 0;
-	background: transparent;
-	outline: none;
-	width: 100%;
-	text-align: center;
-	color: white;
-	margin-bottom: 2px;
-	margin-left: 1px;
-	font-size: inherit;
+    border: 0;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-bottom: 2px;
+    margin-left: 1px;
+    font-size: 16px;
+    font-family: 'AcquaticaFont', serif;
 }
 
 .input::placeholder {
-	color: white;
-	font-family: 'AcquaticaFont';
-	font-size: 14px;
+    color: #d6d6d6;
+    font-family: 'AcquaticaFont', serif;
+    font-size: 12px;
 }
 
-
-
 @keyframes slide {
-	to {
-		transform: translateX(100%);
-		fill: red;
-		opacity: 0;
-	}
+    to {
+        transform: translateX(100%);
+        fill: red;
+        opacity: 0;
+    }
 }

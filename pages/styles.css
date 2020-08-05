@@ -6,3 +6,12 @@ html, body {
     place-items: center;
     background: #283546;
 }
+
+* {
+    margin: 0;
+}
+
+
+input {
+    -moz-box-shadow: none;
+}

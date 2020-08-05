@@ -1,18 +1,14 @@
 import * as React from 'react';
 import styles from './Result.module.css';
-import Link from 'next/link';
+import {useRecoilValue} from "recoil/dist";
+import {mySelector} from "../../atoms/atom";
 
-interface Props {
-	totalResult: string;
-	href: string;
-}
+export function Result(): React.ReactElement {
+  const total = useRecoilValue(mySelector);
 
-export function Result(props: Props): React.ReactElement {
-	return (
-		<div className={styles.container}>
-			<Link href="/results">
-				<a href={props.href} className={styles.anchor}>You Earn: {props.totalResult}$</a>
-			</Link>
-		</div>
-	);
+  return (
+      <div className={styles.container}>
+        <span className={styles.earning}>You Earn:</span> &nbsp; ${Number(total.toFixed(2)).toLocaleString()}
+      </div>
+  );
 }

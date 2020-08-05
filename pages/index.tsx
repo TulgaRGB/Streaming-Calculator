@@ -1,91 +1,64 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { Result } from '../components/result/Result';
-import { StreamingService } from '../components/streamingService/StreamingService';
-import { Header } from '../components/header/Header';
+import React from 'react';
+import {Result} from '../components/result/Result';
+import {StreamingerService} from '../components/streamingService/StreamingService';
+import {HeaderMemoed} from '../components/header/Header';
 import styles from './index.module.css';
 
 interface State {
-	total: number;
-	streamingServices: { name: string; rate: number; count: number }[];
+  total: number;
+  streamingServices: { name: string; rate: number; count: number }[];
 }
 
-const streamingServicesSample: { name: string; rate: number; count: number }[] = [
-	{
-		name: 'Spotify',
-		rate: 0.00437,
-		count: 0
-	},
-	{
-		name: 'Apple Music',
-		rate: 0.00735,
-		count: 0
-	},
-	{
-		name: 'Tidal',
-		rate: 0.0125,
-		count: 0
-	},
-	{
-		name: 'Deezer',
-		rate: 0.0064,
-		count: 0
-	},
-	{
-		name: 'Napster',
-		rate: 0.019,
-		count: 0
-	},
-	{
-		name: 'Pandora',
-		rate: 0.00133,
-		count: 0
-	},
-	{
-		name: 'Amazon Music',
-		rate: 0.00437,
-		count: 0
-	}
-];
 
+export default function Home(state: State): React.ReactNode {
 
-export default function Home(state:State): React.ReactNode {
+  const streamingServices =
+      [
+        {
+          name: 'Spotify',
+          rate: 0.00437,
+        },
+        {
+          name: 'Apple Music',
+          rate: 0.00783,
+        },
+        {
+          name: 'Tidal',
+          rate: 0.01284,
+        },
+        {
+          name: 'Deezer',
+          rate: 0.0064,
+        },
+        {
+          name: 'Pandora',
+          rate: 0.00133,
+        },
+        {
+          name: 'Amazon Music',
+          rate: 0.00402,
+        }
+      ]
+  ;
 
-
-	const [ total, setTotal ] = useState(0);
-	const [ streamingServices, setStreamingService ] = useState(streamingServicesSample);
-
-
-	const calculateTotal = () => {
-		let currentTotal = 0;
-		streamingServices.forEach((streaming) => {
-			currentTotal += streaming.count * streaming.rate;
-		});
-		setTotal(currentTotal);
-	};
-
-	return (
-		<div className={styles.page}>
-			<Head>
-				<title>The streaming salary calculator</title>
-				<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
-				<meta name="description" content="Modern tool to give you information about your streaming earning. Choose all your platforms and
-					get your informations."/>
-			</Head>
-			<div className={styles.container}>
-				<div className={styles.header}>
-					<Header />
-				</div>
-				<div className={styles.streamingsContainer}>
-					{streamingServices.map((streaming) => (
-						<StreamingService streaming={streaming} calculateTotal={calculateTotal} key={streaming.name} />
-					))}
-				</div>
-				<div className={styles.link}>
-					<Result totalResult={total.toFixed(2)}  href={"/results"}/>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+      <div className={styles.page}>
+        <div className={styles.container}>
+          <div className={styles.header}>
+            <HeaderMemoed/>
+          </div>
+          <main>
+            <div className={styles.streamingsContainer}>
+              {streamingServices.map((streaming) => (
+                  <StreamingerService streaming={streaming} key={streaming.name}/>
+              ))}
+            </div>
+            <div className={styles.link}>
+              <Result/>
+            </div>
+          </main>
+        </div>
+      </div>
+  );
 }
 
