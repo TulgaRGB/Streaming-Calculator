@@ -1,6 +1,6 @@
 /.next/
 
 .now
-node_modules
+**/node_modules
 
 .vercel
