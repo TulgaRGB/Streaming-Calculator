@@ -65,14 +65,14 @@
     color: white;
     margin-bottom: 2px;
     margin-left: 1px;
-    font-size: 16px;
-    font-family: 'AcquaticaFont', serif;
+    font-size: 15px;
+    font-family: 'Varela', sans-serif;
 }
 
 .input::placeholder {
     color: #d6d6d6;
-    font-family: 'AcquaticaFont', serif;
-    font-size: 12px;
+    font-family: 'Varela', sans-serif;
+    font-size: 15px;
 }
 
 @keyframes slide {

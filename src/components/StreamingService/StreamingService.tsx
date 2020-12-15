@@ -1,8 +1,8 @@
 import * as React from 'react';
-import styles from './StreamingService.module.css';
 import {useRecoilState} from "recoil/dist";
-import {itemWithId} from '../../atoms/atom';
+import {itemWithId} from '../../../atoms/atom';
 import {useRef} from "react";
+import styles from './StreamingService.module.css';
 
 interface Props {
   streaming: {
@@ -14,7 +14,7 @@ interface Props {
 
 export function StreamingService(props: Props): React.ReactElement {
   const [counter, setCount] = useRecoilState(itemWithId(props.streaming.name));
-  const amountInput = useRef(null)
+  const amountInput = useRef<HTMLInputElement>(null)
 
   function handleChange(value: string): void {
     setCount(({
@@ -25,8 +25,7 @@ export function StreamingService(props: Props): React.ReactElement {
   }
 
   const handleFocus = () => {
-    // @ts-ignore
-    amountInput.current.focus();
+    amountInput.current?.focus()
   }
 
   return (
@@ -34,12 +33,10 @@ export function StreamingService(props: Props): React.ReactElement {
         {props.streaming.name}
         <div className={styles.underline}>
           <label style={{display: 'none'}}> Streams </label>
-          <input type="number" pattern="[0-9]*" step="1" min="1" inputMode='numeric' placeholder="Enter streams"
+          <input type="number" pattern="[0-9]*" step="1" min="1" inputMode='numeric' placeholder="enter streams"
                  className={styles.input} ref={amountInput}
                  onChange={(event) => handleChange(event.target.value)}/>
         </div>
       </div>
   );
 }
-
-export const StreamingerService = StreamingService;

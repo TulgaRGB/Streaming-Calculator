@@ -1,7 +1,7 @@
 {
   "name": "streaming-calculator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Streaming Calculator to estimate music streaming earnings based on streams amount",
   "main": "index.js",
   "scripts": {
     "dev": "next",

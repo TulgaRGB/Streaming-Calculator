@@ -1,7 +1,7 @@
 import * as React from 'react';
-import styles from './Result.module.css';
 import {useRecoilValue} from "recoil/dist";
-import {mySelector} from "../../atoms/atom";
+import {mySelector} from "../../../atoms/atom";
+import styles from './Result.module.css';
 
 export function Result(): React.ReactElement {
   const total = useRecoilValue(mySelector);

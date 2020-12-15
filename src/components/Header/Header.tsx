@@ -5,7 +5,11 @@ export function Header(): React.ReactElement {
   return (
       <div className={styles.outerContainer}>
         <div className={styles.image}/>
-        <div className={styles.header}>Estimate your earnings</div>
+        <div className={styles.header}>
+          <h2>
+          Estimate Your Earnings
+          </h2>
+        </div>
       </div>
   )
 }

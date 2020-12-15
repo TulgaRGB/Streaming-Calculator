@@ -16,3 +16,7 @@ body {
 input {
   -moz-box-shadow: none;
 }
+
+h2 {
+  font-size: 22px
+}

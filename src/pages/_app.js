@@ -11,8 +11,7 @@ export default function MyApp({Component, pageProps}) {
     <RecoilRoot>
       <Head>
         <link rel="icon" href="/favicon.ico"/>
-        <title>Estimate your earnings (2020 update) | Streaming Calculator
-        </title>
+        <title>Estimate your earnings (2021 update) | Streaming Calculator</title>
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
       </Head>
       <Component {...pageProps} />

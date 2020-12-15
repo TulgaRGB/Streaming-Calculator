@@ -1,11 +1,10 @@
 @font-face {
-  font-family: "AcquaticaFont";
-  src: url("../public/assets/fonts/Aquatico-Regular.otf") format("opentype");
+  font-family: 'Varela', sans-serif;
 }
 
 .page {
-  font-family: "AcquaticaFont";
-  font-size: 16px;
+  font-family: "Varela", sans-serif;
+  font-size: 18px;
   width: 94vw;
   max-width: 740px;
   margin-top: 20px;
