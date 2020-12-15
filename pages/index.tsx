@@ -60,7 +60,7 @@ export default function Home(state: State): React.ReactNode {
 
   return (
       <div className={styles.page}>
-                  <main>
+        <main>
         <div className={styles.container}>
           <div className={styles.header}>
             <HeaderMemoed/>
