@@ -40,7 +40,7 @@ interface Paragraph {
 export const paragraphs: Paragraph[] = [
   {
     heading: "What are streaming royalties?",
-    body: "Streaming royalties are the fees paid to songwriters every time a song is played on sites such as Spotify, YouTube and Apple Music. These fees are a vital source of income for songwriters and artists. However, it’s not as simple as it sounds…"
+    body: "Streaming royalties are the main source of income for artists. In fact, they are fees paid to artists and songwriters for every stream on platforms like Spotify, YouTube and Apple Music."
   },
   {
     heading: "Types of streaming service",

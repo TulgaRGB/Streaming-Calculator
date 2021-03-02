@@ -38,7 +38,7 @@ class MyDocument extends Document {
           />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet" />
-          <meta name="description" content="Use our ultimate streaming calculator tool to estimate your earnings. Insert your streams amount and get your result straight away."/>
+          <meta name="description" content="Use our ultimate music streaming calculator tool to estimate your earnings. Insert your streams amount and get your result straight away."/>
         </Head>
         <body>
         <Main />
