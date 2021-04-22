@@ -6,7 +6,6 @@ body {
   display: flex;
   justify-content: center;
   background: #283546;
-  width: 100vw;
 }
 
 * {

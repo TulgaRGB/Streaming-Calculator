@@ -42,7 +42,6 @@
 }
 
 .streamingsContainer > * {
-  padding: 8px 12px;
   border-radius: 4px;
   margin-bottom: 24px;
 }
@@ -64,9 +63,6 @@
     padding: 32px 32px;
   }
 
-  .streamingsContainer > * {
-    padding: 18px 18px;
-  }
 }
 
 /* Paragraph */

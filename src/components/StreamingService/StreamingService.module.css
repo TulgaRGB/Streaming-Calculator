@@ -5,9 +5,13 @@
     background: rgb(37, 36, 41);
     letter-spacing: 1px;
     box-shadow: 0 0 0 1px rgba(75, 193, 157, 0.19);
+    height: auto;
+    padding: 18px 18px;
 }
 
 .altContainer {
+    padding: 17px;
+    box-sizing: content-box;
     border: 1px solid #85E4C6;
 }
 

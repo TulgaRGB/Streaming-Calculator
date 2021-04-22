@@ -28,12 +28,14 @@ export function StreamingService(props: Props): React.ReactElement {
     amountInput.current?.focus()
   }
 
+  const placeHolder: string = 'enter streams';
+
   return (
       <div onClick={handleFocus} className={counter.count === undefined || counter.count === 0 ? styles.container : styles.altContainer}>
         {props.streaming.name}
         <div className={styles.underline}>
           <label style={{display: 'none'}}> Streams </label>
-          <input type="number" pattern="[0-9]*" step="1" min="1" inputMode='numeric' placeholder="enter streams"
+          <input type="number" pattern="[0-9]*" step="1" min="1" inputMode='numeric' placeholder={placeHolder} onFocus={e => e.target.placeholder=''} onBlur={e => e.target.placeholder=placeHolder}
                  className={styles.input} ref={amountInput}
                  onChange={(event) => handleChange(event.target.value)}/>
         </div>
