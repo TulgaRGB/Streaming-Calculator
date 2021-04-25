@@ -1,8 +1,8 @@
 .container {
     text-align: center;
-    padding: 5px 10px;
+    padding: 0 10px;
     margin: auto;
-    font-size: 21px;
+    font-size: 20px;
     background: #85e4c6;
     position: fixed;
     width: 100vh;
@@ -32,12 +32,12 @@
     }
 
     .earning {
-        animation: coloranimation 5s infinite;
+        animation: colorAnimation 5s infinite;
     }
 }
 
 
-@keyframes coloranimation {
+@keyframes colorAnimation {
     0% {
         color: rgba(131, 231, 200, 0.8);
     }

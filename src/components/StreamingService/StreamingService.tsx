@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {useRecoilState} from "recoil/dist";
 import {itemWithId} from '../../../atoms/atom';
-import {useRef} from "react";
+import {useRef, useState} from "react";
+import classnames from 'classnames'
 import styles from './StreamingService.module.css';
 
 interface Props {
@@ -14,6 +15,7 @@ interface Props {
 
 export function StreamingService(props: Props): React.ReactElement {
   const [counter, setCount] = useRecoilState(itemWithId(props.streaming.name));
+  const [isFocused, setIsFocused] = useState<boolean>(false);
   const amountInput = useRef<HTMLInputElement>(null)
   const placeHolder: string = 'enter streams';
 
@@ -26,12 +28,16 @@ export function StreamingService(props: Props): React.ReactElement {
   }
 
   const handleFocus = () => {
-    amountInput.current?.focus()
+    amountInput.current?.focus();
+    if(isFocused === false) {
+      setIsFocused(true)
+    }
   }
 
+  const style = classnames(counter.count === undefined || counter.count === 0 ? styles.container : styles.altContainer, isFocused === true  ? styles.focused : styles.unfocused)
 
   return (
-      <div onClick={handleFocus} className={counter.count === undefined || counter.count === 0 ? styles.container : styles.altContainer}>
+      <div onClick={handleFocus} className={style} onBlur={() => setIsFocused(false)}>
         {props.streaming.name}
         <div className={styles.underline}>
           <label style={{display: 'none'}}> Streams </label>

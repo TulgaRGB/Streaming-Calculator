@@ -4,7 +4,7 @@
     align-items: center;
     background: rgb(37, 36, 41);
     letter-spacing: 1px;
-    box-shadow: 0 0 0 1px rgba(75, 193, 157, 0.19);
+    box-shadow: 0 0 0 1px rgba(75, 193, 157, 0.30);
     height: auto;
     padding: 18px 18px;
 }
@@ -13,6 +13,36 @@
     padding: 17px;
     box-sizing: content-box;
     border: 1px solid #85E4C6;
+}
+
+.focused {
+    animation: highlight 0.3s ease-in-out forwards;
+}
+
+.unfocused {
+    animation: downlight 0.3s ease-in-out;
+}
+
+@keyframes highlight {
+    0% {
+        box-shadow: 0 0 0 1px rgba(75, 193, 157, 0.30);
+    }
+    50% {
+        box-shadow: 0 0 0 1px rgba(75, 193, 157, 0.70);
+    }
+    100% {
+        box-shadow: 0 0 0 1px rgba(75, 193, 157, 0.60);
+    }
+}
+
+
+@keyframes downlight {
+    0% {
+        box-shadow: 0 0 0 1px rgba(75, 193, 157, 0.60);
+    }
+    100% {
+        box-shadow: 0 0 0 1px rgba(75, 193, 157, 0.30);
+    }
 }
 
 .underline {
@@ -77,12 +107,4 @@
     color: #d6d6d6;
     font-family: 'Varela', sans-serif;
     font-size: 15px;
-}
-
-@keyframes slide {
-    to {
-        transform: translateX(100%);
-        fill: red;
-        opacity: 0;
-    }
 }
