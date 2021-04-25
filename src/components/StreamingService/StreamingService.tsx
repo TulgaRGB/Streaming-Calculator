@@ -15,6 +15,7 @@ interface Props {
 export function StreamingService(props: Props): React.ReactElement {
   const [counter, setCount] = useRecoilState(itemWithId(props.streaming.name));
   const amountInput = useRef<HTMLInputElement>(null)
+  const placeHolder: string = 'enter streams';
 
   function handleChange(value: string): void {
     setCount(({
@@ -28,7 +29,6 @@ export function StreamingService(props: Props): React.ReactElement {
     amountInput.current?.focus()
   }
 
-  const placeHolder: string = 'enter streams';
 
   return (
       <div onClick={handleFocus} className={counter.count === undefined || counter.count === 0 ? styles.container : styles.altContainer}>
