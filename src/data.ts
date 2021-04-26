@@ -7,27 +7,27 @@ export const streamingServices: StreamingService[] =
     [
       {
         name: 'Spotify',
-        rate: 0.00437,
+        rate: 0.00348,
       },
       {
         name: 'Apple Music',
-        rate: 0.00783,
+        rate: 0.00675,
       },
       {
         name: 'Tidal',
-        rate: 0.01284,
+        rate: 0.00876,
       },
       {
         name: 'Deezer',
-        rate: 0.0064,
+        rate: 0.00562,
       },
       {
         name: 'Pandora',
-        rate: 0.00133,
+        rate: 0.00203,
       },
       {
         name: 'Amazon Music',
-        rate: 0.00402,
+        rate: 0.00426,
       }
     ]
 ;
