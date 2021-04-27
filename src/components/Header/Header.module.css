@@ -21,9 +21,9 @@
 .image {
     background: url('../../../public/assets/images/logo.png') no-repeat center;
     background-size: cover;
-    height: 43px;
-    width: 43px;
-    margin-right: 12px;
+    height: 40px;
+    width: 40px;
+    margin-right: 8px;
 }
 
 @media (min-width: 520px) {
