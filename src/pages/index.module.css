@@ -4,7 +4,7 @@
 
 .page {
   font-family: "Varela", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   width: 94vw;
   max-width: 670px;
   margin-top: 20px;
@@ -25,7 +25,7 @@
 }
 
 .container {
-  padding: 18px 18px;
+  padding: 20px 16px;
 }
 
 @keyframes mymove {
@@ -42,8 +42,8 @@
 }
 
 .streamingsContainer > * {
-  border-radius: 4px;
-  margin-bottom: 24px;
+  border-radius: 14px;
+  margin-bottom: 20px;
 }
 
 .streamingsContainer > :last-child {
@@ -57,7 +57,7 @@
   }
 
   .streamingsContainer > :last-child {
-    margin-bottom: 18px;
+    margin-bottom: 24px;
   }
 }
 
@@ -66,7 +66,7 @@
   margin-top: 16px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 520px) {
 
   .container {
     padding: 32px 32px;

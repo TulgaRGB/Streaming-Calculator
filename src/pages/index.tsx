@@ -16,13 +16,10 @@ export default function Home(): React.ReactNode {
           </div>
             <div className={styles.streamingsContainer}>
               {streamingServices.map((streaming) => (
-                  <StreamingService streaming={streaming} key={streaming.name}/>
+                  <StreamingService {...streaming} key={streaming.name}/>
               ))}
             </div>
-            <div className={styles.link}>
               <Result/>
-            </div>
-           
         </div>
         <div className={styles.paragraphs}>
               {paragraphs.map((paragraph) => (

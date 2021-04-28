@@ -7,7 +7,7 @@ export function Header(): React.ReactElement {
         <div className={styles.image}/>
         <div className={styles.headings}>
           <h1 className={styles.header}>
-            Music Streaming Calculator
+            Music Royalty Calculator
           </h1>
           <h2 className={styles.header}>
             Estimate your earnings

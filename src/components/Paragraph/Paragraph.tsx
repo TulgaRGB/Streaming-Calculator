@@ -1,6 +1,6 @@
 import * as React from 'react';
-import styles from './Paragraph.module.css';
 import { FiArrowDownCircle } from 'react-icons/fi';
+import styles from './Paragraph.module.css';
 
 interface Props {
     heading: string,

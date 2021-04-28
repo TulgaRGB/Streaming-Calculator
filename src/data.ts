@@ -1,6 +1,7 @@
 interface StreamingService {
   name: string,
-  rate: number
+  rate: number,
+  logo: string
 }
 
 export const streamingServices: StreamingService[] =
@@ -8,26 +9,27 @@ export const streamingServices: StreamingService[] =
       {
         name: 'Spotify',
         rate: 0.00348,
+        logo: './assets/images/spotify.svg'
       },
       {
         name: 'Apple Music',
         rate: 0.00675,
+        logo: './assets/images/apple-music.svg'
       },
       {
         name: 'Tidal',
         rate: 0.00876,
+        logo: './assets/images/tidal.png'
       },
       {
         name: 'Deezer',
         rate: 0.00562,
-      },
-      {
-        name: 'Pandora',
-        rate: 0.00203,
+        logo: './assets/images/deezer.svg'
       },
       {
         name: 'Amazon Music',
         rate: 0.00426,
+        logo: './assets/images/amazon-music.svg'
       }
     ]
 ;

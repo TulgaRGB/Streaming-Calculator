@@ -6,23 +6,22 @@ import classnames from 'classnames'
 import styles from './StreamingService.module.css';
 
 interface Props {
-  streaming: {
     name: string;
     rate: number;
-  };
+    logo: string
 }
 
 
 export function StreamingService(props: Props): React.ReactElement {
-  const [counter, setCount] = useRecoilState(itemWithId(props.streaming.name));
+  const [counter, setCount] = useRecoilState(itemWithId(props.name));
   const [isFocused, setIsFocused] = useState<boolean>(false);
   const amountInput = useRef<HTMLInputElement>(null)
   const placeHolder: string = 'enter streams';
 
   function handleChange(value: string): void {
     setCount(({
-      name: props.streaming.name,
-      rate: props.streaming.rate,
+      name: props.name,
+      rate: props.rate,
       count: Number(value)
     }));
   }
@@ -38,10 +37,13 @@ export function StreamingService(props: Props): React.ReactElement {
 
   return (
       <div onClick={handleFocus} className={style} onBlur={() => setIsFocused(false)}>
-        {props.streaming.name}
+        <div className={styles.streamingService}>
+          <img src={props.logo} width="24px" height="24px" alt={`${props.name} - logo`}/>
+          {props.name}
+        </div>
         <div className={styles.underline}>
           <label style={{display: 'none'}}> Streams </label>
-          <input type="number" pattern="[0-9]*" step="1" min="1" inputMode='numeric' placeholder={placeHolder} onFocus={e => e.target.placeholder=''} onBlur={e => e.target.placeholder=placeHolder}
+          <input type="number" pattern="[0-9]*"  placeholder={placeHolder} onFocus={e => e.target.placeholder=''} onBlur={e => e.target.placeholder=placeHolder}
                  className={styles.input} ref={amountInput}
                  onChange={(event) => handleChange(event.target.value)}/>
         </div>

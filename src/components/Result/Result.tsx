@@ -8,7 +8,7 @@ export function Result(): React.ReactElement {
 
   return (
       <div className={styles.container}>
-        <span className={styles.earning}>You Earn:</span> &nbsp; ${Number(total.toFixed(2)).toLocaleString()}
+        <span className={styles.earning}>You earn:</span> &nbsp; ${Number(total.toFixed(2)).toLocaleString()}
       </div>
   );
 }

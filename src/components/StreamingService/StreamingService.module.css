@@ -1,17 +1,17 @@
 .container, .altContainer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     background: rgb(37, 36, 41);
     letter-spacing: 1px;
     box-shadow: 0 0 0 1px rgba(75, 193, 157, 0.30);
     height: auto;
-    padding: 18px 18px;
+    padding: 14px 16px;
     cursor: pointer;
 }
 
 .altContainer {
-    padding: 17px;
+    padding: 13px 15px;
     box-sizing: content-box;
     border: 1px solid #85E4C6;
 }
@@ -50,19 +50,17 @@
     outline: none;
     position: relative;
     border-radius: 2px;
-    width: 140px;
+    width: 110px;
     height: 100%;
 }
 
 .underline::after {
     content: "";
-    width: 140px;
+    width: 110px;
     position: absolute;
     background-color: #85E4C6;
     height: 2px;
     transform: scaleX(0);
-    left: 50%;
-    margin-left: -68px;
     transition: all 150ms ease-in-out;
     bottom: 0;
 }
@@ -100,12 +98,22 @@
     color: white;
     margin-bottom: 2px;
     margin-left: 1px;
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'Varela', sans-serif;
 }
 
 .input::placeholder {
     color: #d6d6d6;
     font-family: 'Varela', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
+}
+
+
+.streamingService {
+    display: flex;
+    align-items: center;
+}
+
+.streamingService > :first-child {
+    margin-right: 8px;
 }

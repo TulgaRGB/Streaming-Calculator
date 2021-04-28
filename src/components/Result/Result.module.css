@@ -1,18 +1,20 @@
 .container {
     text-align: center;
-    padding: 0 10px;
     margin: auto;
     font-size: 20px;
     background: #85e4c6;
     position: fixed;
-    width: 100vh;
+    width: calc( 94vw - 36px);
     top: 0;
-    border-radius: 4px;
-    transform: translate(-50%, 0%);
-    transition: 0.5s ease-in-out;
     left: 50%;
-    z-index: 30000;
-    height: 30px;
+    transform: translate(-50%, 0%);
+    border-radius: 0  0  14px 14px;
+    z-index: 300;
+    height: 102px;
+    box-shadow: 0 0 40px rgba(133, 228, 198, 0.23);
+    transition: transform 0.25s ease-out;
+    border: 1px solid white;
+    border-top: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,15 +22,17 @@
 }
 
 
-@media (min-height: 520px) {
+@media (min-height: 530px) {
     .container {
         position: static;
         transform: translate(0%, 0%);
-        transition: 0.5s ease-in-out;
         background: transparent;
         width: fit-content;
         color: white;
+        height: 30px;
         margin: 0 auto auto;
+        border: none;
+        box-shadow: none;
     }
 
     .earning {
