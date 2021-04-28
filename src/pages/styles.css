@@ -16,6 +16,11 @@ input {
   -moz-box-shadow: none;
 }
 
+p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
 h1 {
   font-size: 19px;
 }
@@ -23,6 +28,10 @@ h1 {
 h2 {
   font-size: 15px;
   font-weight: 300;
+}
+
+p, h1, h2, h3, h4, div, span {
+  font-family: "Varela", sans-serif;
 }
 
 @media (min-width: 520px) {

@@ -3,7 +3,6 @@
 }
 
 .page {
-  font-family: "Varela", sans-serif;
   font-size: 14px;
   width: 94vw;
   max-width: 670px;
@@ -11,9 +10,8 @@
 }
 
 .container,
+.widget,
 .paragraphs > * {
-  padding: 24px 18px;
-
   border: 1px solid rgba(128, 128, 128, 0.164);
   box-shadow: 0 4px 14px 0 rgba(128, 128, 128, 0.164);
   background: rgb(25, 25, 26);
@@ -27,6 +25,11 @@
 .container {
   padding: 20px 16px;
 }
+
+.widget,
+.paragraphs > * {
+   padding: 18px;
+ }
 
 @keyframes mymove {
   0% {
@@ -86,4 +89,11 @@
 
 .paragraphs > * {
   margin-bottom: 24px;
+}
+
+
+/* Widget */
+
+.widget {
+  margin-top: 40px;
 }
