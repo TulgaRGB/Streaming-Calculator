@@ -4,6 +4,7 @@ import {StreamingService} from '../components/StreamingService/StreamingService'
 import {HeaderMemoed} from '../components/Header/Header';
 import {Paragraph} from '../components/Paragraph/Paragraph';
 import {paragraphs, streamingServices} from "../data";
+import {Widget} from "../components/Widget/Widget";
 import styles from './index.module.css';
 
 export default function Home(): React.ReactNode {
@@ -21,6 +22,11 @@ export default function Home(): React.ReactNode {
             </div>
               <Result/>
         </div>
+
+          <div className={styles.widget}>
+            <Widget/>
+          </div>
+
         <div className={styles.paragraphs}>
               {paragraphs.map((paragraph) => (
                   <Paragraph {...paragraph} key={paragraph.heading}/>

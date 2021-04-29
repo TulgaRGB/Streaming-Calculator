@@ -1,0 +1,18 @@
+.badge {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 14px;
+    background-color: rgb(37, 36, 41);
+    color: white;
+    height: fit-content;
+    padding: 22px 16px;
+}
+
+
+.streamingService {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+}

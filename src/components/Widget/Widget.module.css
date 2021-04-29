@@ -1,0 +1,23 @@
+.input {
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #85E4C6;
+    width: 100px;
+    text-align: center;
+    color: white;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input::placeholder {
+    color: white;
+}
+
+.streamingServices {
+    margin: 24px 0 6px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+    grid-gap: 12px;
+}

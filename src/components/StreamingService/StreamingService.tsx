@@ -43,7 +43,7 @@ export function StreamingService(props: Props): React.ReactElement {
         </div>
         <div className={styles.underline}>
           <label style={{display: 'none'}}> Streams </label>
-          <input type="number" pattern="[0-9]*"  placeholder={placeHolder} onFocus={e => e.target.placeholder=''} onBlur={e => e.target.placeholder=placeHolder}
+          <input type="number" pattern="[0-9]*" min="0"  placeholder={placeHolder} onFocus={e => e.target.placeholder=''} onBlur={e => e.target.placeholder=placeHolder}
                  className={styles.input} ref={amountInput}
                  onChange={(event) => handleChange(event.target.value)}/>
         </div>

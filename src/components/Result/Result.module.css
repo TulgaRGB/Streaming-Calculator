@@ -2,42 +2,14 @@
     text-align: center;
     margin: auto;
     font-size: 20px;
-    background: #85e4c6;
-    position: fixed;
-    width: calc( 94vw - 36px);
+    position: sticky;
     top: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    border-radius: 0  0  14px 14px;
-    z-index: 300;
-    height: 102px;
-    box-shadow: 0 0 40px rgba(133, 228, 198, 0.23);
-    transition: transform 0.25s ease-out;
-    border: 1px solid white;
-    border-top: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
+    color: white
 }
 
 
-@media (min-height: 530px) {
-    .container {
-        position: static;
-        transform: translate(0%, 0%);
-        background: transparent;
-        width: fit-content;
-        color: white;
-        height: 30px;
-        margin: 0 auto auto;
-        border: none;
-        box-shadow: none;
-    }
-
-    .earning {
-        animation: colorAnimation 5s infinite;
-    }
+.earning {
+    animation: colorAnimation 5s infinite;
 }
 
 
