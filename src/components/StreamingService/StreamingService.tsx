@@ -18,11 +18,15 @@ export function StreamingService(props: Props): React.ReactElement {
   const amountInput = useRef<HTMLInputElement>(null)
   const placeHolder: string = 'enter streams';
 
-  function handleChange(value: string): void {
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
+    if(event.target.value.includes('-')) {
+      event.target.value = event.target.value.replace('-','');
+    }
+
     setCount(({
       name: props.name,
       rate: props.rate,
-      count: Number(value)
+      count: Number(event.target.value)
     }));
   }
 
@@ -45,7 +49,7 @@ export function StreamingService(props: Props): React.ReactElement {
           <label style={{display: 'none'}}> Streams </label>
           <input type="number" pattern="[0-9]*" min="0"  placeholder={placeHolder} onFocus={e => e.target.placeholder=''} onBlur={e => e.target.placeholder=placeHolder}
                  className={styles.input} ref={amountInput}
-                 onChange={(event) => handleChange(event.target.value)}/>
+                 onChange={handleChange}/>
         </div>
       </div>
   );

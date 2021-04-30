@@ -20,13 +20,21 @@ export function Widget(): React.ReactElement {
     }
   }
 
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    if(event.target.value.includes('-')) {
+      event.target.value = event.target.value.replace('-','')
+    }
+
+    setValue(event.target.value)
+  }
+
   return (
       <div>
         <h3>
           How many streams are needed to earn
           <input type="number" pattern="[0-9]*" min="1"
                  inputMode='numeric' onFocus={handleFocus} className={styles.input} placeholder={"1000"}
-                 onChange={e => setValue(e.target.value)}/>
+                 onChange={handleChange}/>
           dollars?
         </h3>
         <div className={styles.streamingServices}>
