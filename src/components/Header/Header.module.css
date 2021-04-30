@@ -32,10 +32,3 @@
         width: 56px;
     }
 }
-
-@media (max-height: 529px) {
-    .container {
-        filter: blur(3px);
-        margin-left: 4px;
-    }
-}
