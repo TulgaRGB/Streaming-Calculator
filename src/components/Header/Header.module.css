@@ -19,7 +19,7 @@
 
 
 .image {
-    background: url('../../../public/assets/images/logo.png') no-repeat center;
+    background: url('/assets/images/logo.png') no-repeat center;
     background-size: cover;
     height: 36px;
     width: 30px;
