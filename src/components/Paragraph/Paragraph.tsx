@@ -17,7 +17,7 @@ export function Paragraph (props: Props): React.ReactElement {
     }
 
     return (
-        <div className={styles.paragraphWrapper}>
+        <section className={styles.paragraphWrapper}>
             <div className={styles.headingWrapper} onClick={handleClick} >
                 <div className={styles.heading}>
                     <h3>{props.heading}</h3>
@@ -30,7 +30,7 @@ export function Paragraph (props: Props): React.ReactElement {
             <div className={ open ? styles.body : styles.bodyOpened}>
                 <p>{props.body}</p>
             </div>
-        </div>
+        </section>
     )
     
 }
