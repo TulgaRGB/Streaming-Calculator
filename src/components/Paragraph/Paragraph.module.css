@@ -8,6 +8,7 @@
 }
 
 .headingWrapper {
+  cursor: pointer;
   display: flex;
   align-items: flex-start;
 }
@@ -24,7 +25,6 @@
 .icon,
 .iconClicked {
   transition: all 0.3s ease-in;
-  cursor: pointer;
   flex-grow: 0;
   display: flex;
 }
