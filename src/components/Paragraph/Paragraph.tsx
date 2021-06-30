@@ -24,7 +24,7 @@ export function Paragraph (props: Props): React.ReactElement {
                 </div>
 
                 <div className={open ? styles.icon : styles.iconClicked}>
-                    <FiArrowDownCircle size={"24px"} />
+                    <FiArrowDownCircle size={"24px"} aria-label={'open'}/>
                 </div>
             </div>
             <div className={ open ? styles.body : styles.bodyOpened}>
