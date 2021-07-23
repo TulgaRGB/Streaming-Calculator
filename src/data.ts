@@ -48,4 +48,8 @@ export const paragraphs: Paragraph[] = [
     heading: "Types of streaming service",
     body: "There are two types of steaming service: On-demand and Non-interactive. \n On-demand services include platforms such as Spotify, Apple Music and Youtube. They are placed in this category for their music being ‘on-demand’. Listeners can hear any song whenever they see fit. Non-interactive streaming platforms include sites such as Pandora and internet radio websites. These platforms function much like a radio, playing songs to listeners at random, without the ability to select specific tracks. "
   },
+  {
+    heading: "How much does spotify pay per stream?",
+    body: "Spotify pays between $0.003 and $0.0084 per stream. This figure may depend on the listener's location, song popularity and other factors. Music Royalty Calculator uses $0.00348 as the rate per stream on Spotify, therefore, the actual earning may be higher."
+  }
 ]
