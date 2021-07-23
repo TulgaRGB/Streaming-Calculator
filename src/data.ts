@@ -45,7 +45,7 @@ export const paragraphs: Paragraph[] = [
     body: "Streaming royalties are the main source of income for artists. In fact, they are fees paid to artists and songwriters for every stream on platforms like Spotify, YouTube and Apple Music."
   },
   {
-    heading: "Types of streaming service",
+    heading: "What types of streaming services are there?",
     body: "There are two types of steaming service: On-demand and Non-interactive. \n On-demand services include platforms such as Spotify, Apple Music and Youtube. They are placed in this category for their music being ‘on-demand’. Listeners can hear any song whenever they see fit. Non-interactive streaming platforms include sites such as Pandora and internet radio websites. These platforms function much like a radio, playing songs to listeners at random, without the ability to select specific tracks. "
   },
   {
