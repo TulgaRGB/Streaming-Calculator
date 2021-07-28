@@ -39,6 +39,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#83e4c6"/>
           <meta name="description" content="Use our ultimate music streaming calculator tool to estimate your earnings. Insert your streams amount and get your result straight away."/>
           <meta name="keywords" content="Streaming, Music, Royalty, Earnings, Tool, Calculator, 2021"/>
+          <link rel="preload" href="../fonts/varela/varela-v11-latin-regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         </Head>
         <body>
         <Main />
