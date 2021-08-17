@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useRecoilValue} from "recoil/dist";
+import {useRecoilValue} from "recoil";
 import {currencySelector, mySelector} from "../../../atoms/atom";
 import {CurrencyConverter} from "../CurrencyConverter/CurrencyConverter";
 import styles from './Result.module.css';

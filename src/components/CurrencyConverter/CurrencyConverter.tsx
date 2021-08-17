@@ -13,7 +13,7 @@ import {useLocalStorage} from "../../hooks/UseLocalStorage";
 export function CurrencyConverter(): React.ReactElement{
   const [activeCurrency, setActiveCurrency] = useRecoilState(itemCurrencyActive);
   const [activeCurrencyLocalStorage, setActiveCurrencyLocalStorage] = useLocalStorage('currency', {name: 'USD', rate: 1, symbol: '$'});
-  const {loading, error, data} = UseFetchData('https://v6.exchangerate-api.com/v6/64d5643bf5ffa917c338ba01//USD')
+  const {loading, error, data} = UseFetchData('https://v6.exchangerate-api.com/v6/64d5643bf5ffa917c338ba01/latest/USD')
   const [, setIsOpen] = useState(false);
 
   useEffect(() => {

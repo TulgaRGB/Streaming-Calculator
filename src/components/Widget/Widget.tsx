@@ -40,7 +40,7 @@ export function Widget(): React.ReactElement {
         <div className={styles.streamingServices}>
           {streamingServices.map((streamingService => {
                 return <Badge name={streamingService.name} amount={getAmount(streamingService.rate)}
-                              logo={streamingService.logo}/>
+                              logo={streamingService.logo} key={streamingService.name}/>
           }
           ))}
         </div>

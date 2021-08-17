@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useRecoilState} from "recoil/dist";
+import {useRecoilState} from "recoil";
 import {itemWithId} from '../../../atoms/atom';
 import {useRef, useState} from "react";
 import classnames from 'classnames'

@@ -1,4 +1,4 @@
-import {atomFamily, selector, atom} from "recoil/dist";
+import {atomFamily, selector, atom} from "recoil";
 
 export const itemWithId = atomFamily({
   key: `item`,
