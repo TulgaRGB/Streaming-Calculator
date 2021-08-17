@@ -1,15 +1,25 @@
 .container {
-    text-align: center;
-    margin: auto;
-    font-size: 20px;
-    position: sticky;
-    top: 0;
-    color: white
+    font-size: 21px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > *+* {
+    margin-left: 12px;
 }
 
 
 .earning {
     animation: colorAnimation 5s infinite;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
 }
 
 

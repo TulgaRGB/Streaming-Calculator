@@ -1,4 +1,4 @@
-import {atomFamily, selector} from "recoil/dist";
+import {atomFamily, selector, atom} from "recoil/dist";
 
 export const itemWithId = atomFamily({
   key: `item`,
@@ -28,3 +28,22 @@ function computeTotalEarning(selectedItems: { name: string; count: number; rate:
   }
   return currentTotal;
 }
+
+export type Currency = 'USD' | 'GBP' | 'EUR';
+export type CurrencySymbol = '$' | '£' | '€'
+
+export const itemCurrencyActive = atom({
+  key: 'activeCurrency',
+  default :  {
+      name: 'USD' as Currency,
+      rate: 1,
+      symbol: '$' as CurrencySymbol
+  },
+})
+
+export const currencySelector = selector({
+  key: 'CurrencySelector',
+  get: ({get}) => {
+    return get(itemCurrencyActive);
+  }
+})

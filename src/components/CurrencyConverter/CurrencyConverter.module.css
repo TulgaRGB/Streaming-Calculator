@@ -1,0 +1,36 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+}
+.wrapper > *+* {
+    margin-left: 12px;
+}
+
+.currencySwitcher {
+    display: flex;
+    flex-direction: column;
+    background: rgb(28, 23, 23);
+    color: white;
+    position: absolute;
+    padding: 12px;
+    border-radius: 12px;
+    gap: 8px;
+    border: 1px solid rgb(131, 231, 200);
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    left: 50px;
+}
+
+.switcher {
+    padding: 3px;
+    background: #70636345;
+    color: rgb(131, 231, 200);
+    border-radius: 100%;
+    text-transform: lowercase;
+    display: flex;
+}
+
+.switcher:hover {
+    cursor: pointer;
+}
