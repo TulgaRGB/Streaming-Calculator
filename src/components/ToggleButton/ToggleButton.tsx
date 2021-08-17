@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from './ToggleButton.module.css';
+import styles from './ToggleButton.module.css';
 
 interface Props {
   onClick: () => void,

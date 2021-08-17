@@ -6,7 +6,7 @@ import mock from '../../mock.json';
 import {UseFetchData} from "../../hooks/UseFetchData";
 import {Currency, CurrencySymbol, itemCurrencyActive} from "../../../atoms/atom";
 import {ToggleButton} from "../ToggleButton/ToggleButton";
-import * as styles from './CurrencyConverter.module.css';
+import styles from './CurrencyConverter.module.css';
 import {useLocalStorage} from "../../hooks/UseLocalStorage";
 
 
