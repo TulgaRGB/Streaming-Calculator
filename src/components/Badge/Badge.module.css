@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 14px;
-    background-color: rgb(37, 36, 41);
+    border-radius: 16px;
+    background-color: rgba(131,229,198, 0.06);
     color: white;
     height: fit-content;
     padding: 22px 16px;

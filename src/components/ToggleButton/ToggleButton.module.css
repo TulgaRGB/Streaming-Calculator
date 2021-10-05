@@ -1,16 +1,19 @@
 .button {
-    background: grey;
+    background: transparent;
+    color: white;
     padding: 4px 8px;
-    border-radius: 12px;
+    border-radius: 18px;
     border: 1px solid white;
+}
+
+.inactive:hover {
+    cursor: pointer;
+    background: rgba(133, 228, 198, 0.35)
 }
 
 .active {
     background: #85E4C6;
-    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0
-}
-
-.button:hover {
-    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    color: black;
 }
 

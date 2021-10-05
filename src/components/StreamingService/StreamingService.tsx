@@ -6,11 +6,10 @@ import classnames from 'classnames'
 import styles from './StreamingService.module.css';
 
 interface Props {
-    name: string;
-    rate: number;
-    logo: string
+  name: string;
+  rate: number;
+  logo: string
 }
-
 
 export function StreamingService(props: Props): React.ReactElement {
   const [counter, setCount] = useRecoilState(itemWithId(props.name));

@@ -8,6 +8,6 @@ interface Props {
 }
 export function ToggleButton({onClick, isActive, label}: Props): React.ReactElement {
   return (
-      <button onClick={onClick} className={`${styles.button} ${isActive? styles.active : undefined}`}>{label}</button>
+      <button onClick={onClick} className={`${styles.button} ${isActive? styles.active : styles.inactive}`}>{label}</button>
   )
 }

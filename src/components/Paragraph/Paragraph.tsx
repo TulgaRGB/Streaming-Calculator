@@ -15,8 +15,8 @@ export function Paragraph (props: Props): React.ReactElement {
     }
 
     return (
-        <section className={styles.paragraphWrapper}>
-            <div className={styles.headingWrapper} onClick={handleClick}>
+        <section className={styles.paragraphWrapper} onClick={handleClick}>
+            <div className={styles.headingWrapper} >
                 <div className={styles.heading}>
                     <h3>{props.heading}</h3>
                 </div>
