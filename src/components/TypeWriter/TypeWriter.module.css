@@ -1,0 +1,35 @@
+.container {
+    display: inline-block;
+}
+
+.typedOut {
+    width: 0;
+    padding-right: 1px;
+    border-right: .15em solid transparent;
+    overflow: hidden;
+    white-space: nowrap;
+
+    animation: reveal steps(22) 1.2s forwards, blink 0.6s 2 forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes reveal {
+    0% {
+        width: ;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0% {
+        border-color: #85E4C6;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+

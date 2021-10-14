@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { TypeWriter } from "../TypeWriter/TypeWriter";
 import styles from './Header.module.css'
 
 export function Header(): React.ReactElement {
@@ -9,9 +10,9 @@ export function Header(): React.ReactElement {
           <h1 className={styles.header}>
             Music Royalty Calculator
           </h1>
-          <h2 className={styles.header}>
+          <TypeWriter as={'h2'} style={styles.header}>
             Estimate your earnings
-          </h2>
+          </TypeWriter>
         </div>
       </div>
   )
