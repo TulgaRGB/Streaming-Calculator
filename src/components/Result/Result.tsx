@@ -12,7 +12,7 @@ export function Result(): React.ReactElement {
       <div className={styles.container}>
         <CurrencyConverter />
         <div className={styles.result}>
-          <span className={styles.earning} aria-label={`${currency.name} earning estimate`}>You earn:</span> &nbsp; {currency.symbol}{Number((total * currency.rate).toFixed(2)).toLocaleString()}
+          <span className={styles.earning} aria-label={`${currency.name} earning estimate`}>You earn</span> &nbsp;{currency.symbol}{Number((total * currency.rate).toFixed(2)).toLocaleString()}
         </div>
       </div>
   );
