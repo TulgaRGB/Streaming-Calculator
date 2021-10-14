@@ -5,6 +5,7 @@ import {HeaderMemoed} from '../components/Header/Header';
 import {Paragraph} from '../components/Paragraph/Paragraph';
 import {paragraphs, streamingServices} from "../data";
 import {Widget} from "../components/Widget/Widget";
+import {Support} from "../components/Support/Support";
 import styles from './index.module.css';
 
 export default function Home(): React.ReactNode {
@@ -31,7 +32,8 @@ export default function Home(): React.ReactNode {
               {paragraphs.map((paragraph) => (
                   <Paragraph {...paragraph} key={paragraph.heading}/>
               ))}
-            </div>
+        </div>
+        <Support />
         </main>
       </div>
   );
