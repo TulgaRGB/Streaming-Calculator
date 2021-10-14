@@ -1,3 +1,7 @@
+.heading {
+    letter-spacing: 1px;
+}
+
 .input {
     background: transparent;
     outline: none;

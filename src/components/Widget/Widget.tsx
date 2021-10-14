@@ -30,7 +30,7 @@ export function Widget(): React.ReactElement {
 
   return (
       <div>
-        <h3>
+        <h3 className={styles.heading}>
           How many streams are needed to earn
           <input type="number" pattern="[0-9]*" min="1" title={'Individually per streaming service'}
                  inputMode='numeric' onFocus={handleFocus} className={styles.input} placeholder={"1000"}
