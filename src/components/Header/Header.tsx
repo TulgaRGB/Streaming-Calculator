@@ -10,7 +10,7 @@ export function Header(): React.ReactElement {
           <h1 className={styles.header}>
             Music Royalty Calculator
           </h1>
-          <TypeWriter as={'h2'} style={styles.header}>
+          <TypeWriter as={'h2'} className={styles.header}>
             Estimate your earnings
           </TypeWriter>
         </div>
