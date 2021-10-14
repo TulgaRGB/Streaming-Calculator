@@ -2,11 +2,15 @@ import * as React from "react";
 import {useRef, useState} from "react";
 import {streamingServices} from "../../data";
 import {Badge} from "../Badge/Badge";
+import {currencySelector} from "../../../atoms/atom";
+import {useRecoilValue} from "recoil";
+import {currencyMapping} from "../../data";
 import styles from './Widget.module.css'
 
 export function Widget(): React.ReactElement {
   const [value, setValue] = useState('1000');
-  const hasChangedOnce  = useRef<boolean>(false)
+  const currency = useRecoilValue(currencySelector);
+  const hasChangedOnce  = useRef<boolean>(false);
 
   function getAmount(rate: number): string {
     return (Number(value) / rate).toFixed(0);
@@ -35,11 +39,11 @@ export function Widget(): React.ReactElement {
           <input type="number" pattern="[0-9]*" min="1" title={'Individually per streaming service'}
                  inputMode='numeric' onFocus={handleFocus} className={styles.input} placeholder={"1000"}
                  onChange={handleChange}/>
-          dollars?
+          {currencyMapping(currency.symbol)}?
         </h3>
         <div className={styles.streamingServices}>
           {streamingServices.map((streamingService => {
-                return <Badge name={streamingService.name} amount={getAmount(streamingService.rate)}
+                return <Badge name={streamingService.name} amount={getAmount(streamingService.rate * currency.rate)}
                               logo={streamingService.logo} key={streamingService.name}/>
           }
           ))}

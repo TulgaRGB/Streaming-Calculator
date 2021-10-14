@@ -1,3 +1,5 @@
+import {CurrencySymbol} from "../atoms/atom";
+
 interface StreamingService {
   name: string,
   rate: number,
@@ -53,3 +55,14 @@ export const paragraphs: Paragraph[] = [
     body: "Spotify pays between $0.003 and $0.0084 per stream. This figure may depend on the listener's location, song popularity and other factors. Music Royalty Calculator uses $0.00348 as the rate per stream on Spotify, therefore, the actual earning may be higher."
   }
 ]
+
+export const currencyMapping = (symbol: CurrencySymbol):string => {
+  switch (symbol) {
+    case '$':
+      return 'dollars';
+    case '£':
+      return 'pounds';
+    case '€':
+      return 'euro';
+  }
+}

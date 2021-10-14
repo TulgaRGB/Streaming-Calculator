@@ -1,7 +1,7 @@
 .container, .altContainer {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     letter-spacing: 1px;
     box-shadow: 0 0 0 1px rgba(131,228,198, 0.30);
     padding: 12px 18px;
@@ -102,7 +102,6 @@
     text-align: center;
     color: white;
     margin-bottom: 2px;
-    margin-left: 1px;
     font-size: 14px;
     font-family: 'Varela', sans-serif;
 }

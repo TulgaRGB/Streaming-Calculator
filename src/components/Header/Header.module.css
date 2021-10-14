@@ -19,14 +19,14 @@
 .image {
     background: url('/assets/images/logo.png') no-repeat center;
     background-size: cover;
-    height: 36px;
-    width: 30px;
-    margin-right: 12px;
+    height: 29px;
+    width: 24px;
+    margin-right: 7px;
 }
 
 @media (min-width: 520px) {
     .image {
-        height: 63px;
-        width: 56px;
+        height: 46px;
+        width: 47px;
     }
 }

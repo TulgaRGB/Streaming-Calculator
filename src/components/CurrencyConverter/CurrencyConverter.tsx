@@ -22,7 +22,6 @@ export function CurrencyConverter(): React.ReactElement{
 
   function getRate(name: Currency) {
     if (data === null) {
-      console.log(mock['conversion_rates'][name])
       return mock['conversion_rates'][name];
     }
     return data['conversion_rates'][name] ?? mock['conversion_rates'][name]
@@ -37,9 +36,9 @@ export function CurrencyConverter(): React.ReactElement{
 
   return  (
       <div className={styles.wrapper}>
-                <ToggleButton onClick={() => handleSetCurrency('USD', '$')} label='USD' isActive={activeCurrency.name ==='USD'}/>
-                <ToggleButton onClick={() => handleSetCurrency('GBP', '£')} label='GBP' isActive={activeCurrency.name ==='GBP'}/>
-                <ToggleButton onClick={() => handleSetCurrency('EUR', '€')} label='EUR' isActive={activeCurrency.name ==='EUR'}/>
+        <ToggleButton onClick={() => handleSetCurrency('USD', '$')} label='USD' isActive={activeCurrency.name ==='USD'}/>
+        <ToggleButton onClick={() => handleSetCurrency('GBP', '£')} label='GBP' isActive={activeCurrency.name ==='GBP'}/>
+        <ToggleButton onClick={() => handleSetCurrency('EUR', '€')} label='EUR' isActive={activeCurrency.name ==='EUR'}/>
       </div>
   )
 }
