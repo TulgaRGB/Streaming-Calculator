@@ -40,7 +40,7 @@ export function Widget(): React.ReactElement {
           type="number"
           pattern="[0-9]*"
           min="1"
-          title={"Individually per streaming service"}
+          title={"Per streaming service"}
           inputMode="numeric"
           onFocus={handleFocus}
           className={styles.input}

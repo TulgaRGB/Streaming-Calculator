@@ -46,7 +46,7 @@ class MyDocument extends Document {
           />
           <meta
             name="keywords"
-            content="Streaming, Music, Royalty, Earnings, Tool, Calculator, 2021"
+            content="Streaming, Music, Stream, Royalty, Earnings, Revenue, Tool, Calculator, 2021"
           />
           <link
             rel="preload"

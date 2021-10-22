@@ -14,12 +14,11 @@ export function Badge(props: Props): React.ReactElement {
         src={props.logo}
         width="24px"
         height="24px"
-        alt={`${props.name} - logo`}
+        alt={`${props.name} - stream calculator`}
       />
       <div className={styles.streamingService}>
         <div>{props.name}</div>
         <div style={{ color: "#85E4C6" }}>
-          {" "}
           {Number(props.amount).toLocaleString()}
         </div>
       </div>
