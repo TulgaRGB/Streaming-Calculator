@@ -42,7 +42,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#83e4c6" />
           <meta
             name="description"
-            content="Use our ultimate music streaming calculator tool to estimate your earnings. Insert your streams amount and get your result straight away."
+            content="Use our latest music streaming calculator tool to estimate your earnings and compare different music streaming services."
           />
           <meta
             name="keywords"
