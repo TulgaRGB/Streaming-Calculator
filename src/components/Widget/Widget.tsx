@@ -33,7 +33,7 @@ export function Widget(): React.ReactElement {
   }
 
   return (
-    <div>
+    <>
       <h3 className={styles.heading}>
         How many streams are needed to earn
         <input
@@ -61,6 +61,6 @@ export function Widget(): React.ReactElement {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }
