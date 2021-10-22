@@ -10,31 +10,29 @@ import styles from "./index.module.css";
 
 export default function Home(): React.ReactNode {
   return (
-    <div className={styles.page}>
-      <main>
-        <div className={styles.container}>
-          <div className={styles.header}>
-            <HeaderMemoed />
-          </div>
-          <div className={styles.streamingsContainer}>
-            {streamingServices.map((streaming) => (
-              <StreamingService {...streaming} key={streaming.name} />
-            ))}
-          </div>
-          <Result />
+    <main className={styles.page}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <HeaderMemoed />
         </div>
-
-        <div className={styles.widget}>
-          <Widget />
-        </div>
-
-        <div className={styles.paragraphs}>
-          {paragraphs.map((paragraph) => (
-            <Paragraph {...paragraph} key={paragraph.heading} />
+        <div className={styles.streamingsContainer}>
+          {streamingServices.map((streaming) => (
+            <StreamingService {...streaming} key={streaming.name} />
           ))}
         </div>
-        <Support />
-      </main>
-    </div>
+        <Result />
+      </div>
+
+      <div className={styles.widget}>
+        <Widget />
+      </div>
+
+      <div className={styles.paragraphs}>
+        {paragraphs.map((paragraph) => (
+          <Paragraph {...paragraph} key={paragraph.heading} />
+        ))}
+      </div>
+      <Support />
+    </main>
   );
 }
