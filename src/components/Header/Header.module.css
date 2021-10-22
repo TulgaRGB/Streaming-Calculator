@@ -1,32 +1,32 @@
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
 }
 
 .headings {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .header {
-    font-family: inherit;
-    letter-spacing: 1px;
+  font-family: inherit;
+  letter-spacing: 1px;
 }
 
 .image {
-    background: url('/assets/images/logo.png') no-repeat center;
-    background-size: cover;
-    height: 29px;
-    width: 24px;
-    margin-right: 7px;
+  background: url("/assets/images/logo.png") no-repeat center;
+  background-size: cover;
+  height: 29px;
+  width: 24px;
+  margin-right: 7px;
 }
 
 @media (min-width: 520px) {
-    .image {
-        height: 46px;
-        width: 47px;
-    }
+  .image {
+    height: 46px;
+    width: 47px;
+  }
 }

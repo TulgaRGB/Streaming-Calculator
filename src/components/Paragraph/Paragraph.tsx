@@ -1,34 +1,33 @@
-import * as React from 'react';
-import { FiArrowDownCircle } from 'react-icons/fi';
-import styles from './Paragraph.module.css';
+import * as React from "react";
+import { FiArrowDownCircle } from "react-icons/fi";
+import styles from "./Paragraph.module.css";
 
 interface Props {
-    heading: string,
-    body: string,
+  heading: string;
+  body: string;
 }
 
-export function Paragraph (props: Props): React.ReactElement {
-    const [open, setOpen] = React.useState(true);
+export function Paragraph(props: Props): React.ReactElement {
+  const [open, setOpen] = React.useState(true);
 
-    function handleClick () {
-        setOpen(prevState => !prevState)
-    }
+  function handleClick() {
+    setOpen((prevState) => !prevState);
+  }
 
-    return (
-        <section className={styles.paragraphWrapper} onClick={handleClick}>
-            <div className={styles.headingWrapper} >
-                <div className={styles.heading}>
-                    <h3>{props.heading}</h3>
-                </div>
+  return (
+    <section className={styles.paragraphWrapper} onClick={handleClick}>
+      <div className={styles.headingWrapper}>
+        <div className={styles.heading}>
+          <h3>{props.heading}</h3>
+        </div>
 
-                <div className={open ? styles.icon : styles.iconClicked}>
-                    <FiArrowDownCircle size={"24px"} aria-label={'open'}/>
-                </div>
-            </div>
-            <div className={open ? styles.body : styles.bodyOpened}>
-                <p>{props.body}</p>
-            </div>
-        </section>
-    )
-    
+        <div className={open ? styles.icon : styles.iconClicked}>
+          <FiArrowDownCircle size={"24px"} aria-label={"open"} />
+        </div>
+      </div>
+      <div className={open ? styles.body : styles.bodyOpened}>
+        <p>{props.body}</p>
+      </div>
+    </section>
+  );
 }

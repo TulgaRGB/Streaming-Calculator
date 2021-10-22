@@ -1,18 +1,17 @@
 .badge {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 16px;
-    background-color: rgba(131,229,198, 0.06);
-    color: white;
-    height: fit-content;
-    padding: 22px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  background-color: rgba(131, 229, 198, 0.06);
+  color: white;
+  height: fit-content;
+  padding: 22px 16px;
 }
 
-
 .streamingService {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
 }

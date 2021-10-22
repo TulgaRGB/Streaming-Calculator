@@ -1,37 +1,35 @@
 .container {
-    font-size: 21px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 12px;
+  font-size: 21px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
-.container > *+* {
-    margin-left: 12px;
+.container > * + * {
+  margin-left: 12px;
 }
-
 
 .earning {
-    animation: colorAnimation 5s infinite;
+  animation: colorAnimation 5s infinite;
 }
 
 .result {
-    display: flex;
-    flex-direction: row;
-    margin-left: 0;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
 }
 
-
 @keyframes colorAnimation {
-    0% {
-        color: rgba(131, 231, 200, 0.8);
-    }
-    50% {
-        color: rgb(131, 231, 200);
-    }
-    100% {
-        color: rgba(131, 231, 200, 0.8);
-    }
+  0% {
+    color: rgba(131, 231, 200, 0.8);
+  }
+  50% {
+    color: rgb(131, 231, 200);
+  }
+  100% {
+    color: rgba(131, 231, 200, 0.8);
+  }
 }
