@@ -1,8 +1,6 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
-import mock from "../../mock.json";
-
 import { UseFetchData } from "../../hooks/UseFetchData";
 import {
   Currency,
@@ -10,17 +8,15 @@ import {
   itemCurrencyActive,
 } from "../../../atoms/atom";
 import { ToggleButton } from "../ToggleButton/ToggleButton";
-import styles from "./CurrencyConverter.module.css";
 import { useLocalStorage } from "../../hooks/UseLocalStorage";
+import mock from "../../mock.json";
+import styles from "./CurrencyConverter.module.css";
 
 export function CurrencyConverter(): React.ReactElement {
-  const [activeCurrency, setActiveCurrency] = useRecoilState(
-    itemCurrencyActive
-  );
-  const [
-    activeCurrencyLocalStorage,
-    setActiveCurrencyLocalStorage,
-  ] = useLocalStorage("currency", { name: "USD", rate: 1, symbol: "$" });
+  const [activeCurrency, setActiveCurrency] =
+    useRecoilState(itemCurrencyActive);
+  const [activeCurrencyLocalStorage, setActiveCurrencyLocalStorage] =
+    useLocalStorage("currency", { name: "USD", rate: 1, symbol: "$" });
   const { data } = UseFetchData(
     "https://v6.exchangerate-api.com/v6/64d5643bf5ffa917c338ba01/latest/USD"
   );

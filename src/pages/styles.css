@@ -43,6 +43,10 @@ h2 {
   font-weight: 300;
 }
 
+h4 {
+  letter-spacing: 1px;
+}
+
 p,
 h1,
 h2,

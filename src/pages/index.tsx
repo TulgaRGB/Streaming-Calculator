@@ -6,7 +6,9 @@ import { Paragraph } from "../components/Paragraph/Paragraph";
 import { paragraphs, streamingServices } from "../data";
 import { Widget } from "../components/Widget/Widget";
 import { Support } from "../components/Support/Support";
+import { StreamingServiceReset } from "../higherOrderComponents/StreamingServiceReset";
 import styles from "./index.module.css";
+import AdditionalStreamingServices from "../components/AdditionalStreamingServices/AdditionalStreamingServices";
 
 export default function Home(): React.ReactNode {
   return (
@@ -16,10 +18,33 @@ export default function Home(): React.ReactNode {
           <HeaderMemoed />
         </div>
         <div className={styles.streamingsContainer}>
-          {streamingServices.map((streaming) => (
-            <StreamingService {...streaming} key={streaming.name} />
-          ))}
+          {streamingServices.map((streaming, index) => {
+            if (index > 3) {
+              return null;
+            }
+            return <StreamingService {...streaming} key={streaming.name} />;
+          })}
         </div>
+
+        <AdditionalStreamingServices>
+          <div className={styles.streamingsContainer}>
+            {streamingServices.map((streaming, index) => {
+              if (index < 4) {
+                return null;
+              }
+              return (
+                <StreamingServiceReset name={streaming.name}>
+                  <StreamingService
+                    {...streaming}
+                    key={streaming.name}
+                    reset={true}
+                  />
+                </StreamingServiceReset>
+              );
+            })}
+          </div>
+        </AdditionalStreamingServices>
+
         <Result />
       </div>
 

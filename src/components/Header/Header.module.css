@@ -22,6 +22,7 @@
   height: 29px;
   width: 24px;
   margin-right: 7px;
+  margin-left: -4px;
 }
 
 @media (min-width: 520px) {

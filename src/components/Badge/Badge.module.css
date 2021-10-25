@@ -5,8 +5,11 @@
   border-radius: 16px;
   background-color: rgba(131, 229, 198, 0.06);
   color: white;
-  height: fit-content;
   padding: 22px 16px;
+}
+
+.badge > * + * {
+  margin-left: 6px;
 }
 
 .streamingService {
@@ -14,4 +17,5 @@
   flex-direction: column;
   gap: 4px;
   align-items: flex-end;
+  text-align: right;
 }

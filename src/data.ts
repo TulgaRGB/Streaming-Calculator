@@ -32,6 +32,21 @@ export const streamingServices: StreamingService[] = [
     rate: 0.00426,
     logo: "./assets/images/amazon-music.svg",
   },
+  {
+    name: "Youtube Music",
+    rate: 0.00735,
+    logo: "./assets/images/youtube-music.svg",
+  },
+  {
+    name: "Pandora",
+    rate: 0.00133,
+    logo: "./assets/images/pandora.png",
+  },
+  {
+    name: "Napster",
+    rate: 0.01682,
+    logo: "./assets/images/napster.svg",
+  },
 ];
 
 interface Paragraph {

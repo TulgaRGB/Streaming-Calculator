@@ -1,6 +1,9 @@
 import * as React from "react";
-import { useRecoilState } from "recoil";
-import { itemWithId } from "../../../atoms/atom";
+import { useRecoilState, useRecoilValue } from "recoil";
+import {
+  additionalStreamingServicesExpanded,
+  itemWithId,
+} from "../../../atoms/atom";
 import { useRef, useState } from "react";
 import classnames from "classnames";
 import styles from "./StreamingService.module.css";
@@ -9,13 +12,21 @@ interface Props {
   name: string;
   rate: number;
   logo: string;
+  reset?: boolean;
 }
 
 export function StreamingService(props: Props): React.ReactElement {
   const [counter, setCount] = useRecoilState(itemWithId(props.name));
+  const isExpanded = useRecoilValue(additionalStreamingServicesExpanded);
   const [isFocused, setIsFocused] = useState<boolean>(false);
   const amountInput = useRef<HTMLInputElement>(null);
   const placeHolder: string = "enter streams";
+
+  React.useEffect(() => {
+    if (props.reset && amountInput.current) {
+      amountInput.current.value = "";
+    }
+  }, [isExpanded.isExpanded]);
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
     event.target.value = event.target.value.replace(/\D+/g, "");

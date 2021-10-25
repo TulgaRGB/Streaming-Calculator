@@ -5,6 +5,10 @@
   margin-top: 30px;
 }
 
+.streamingsContainer {
+  padding: 1px;
+}
+
 .container,
 .widget,
 .paragraphs > * {
@@ -32,7 +36,7 @@
 }
 
 .streamingsContainer > :last-child {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 .streamingsContainer > * + * {
