@@ -20,6 +20,7 @@ export const mySelector = selector({
       "Apple Music",
       "Youtube Music",
       "Napster",
+      "Pandora",
     ];
     const selectedItems = ids.map((id) => get(itemWithId(id)));
     return computeTotalEarning(selectedItems);
@@ -65,9 +66,14 @@ export const additionalStreamingServicesExpanded = atom({
   },
 });
 
-export const additionalStreamingServicesExpandedSelector = selector({
-  key: "AdditionalStreamingServicesExpanded",
+export const royaltiesPercentage = atom({
+  key: "royaltiesPercentage",
+  default: 100,
+});
+
+export const royaltiesPercentageSelector = selector({
+  key: "RoyaltiesPercentageSelector",
   get: ({ get }) => {
-    return get(additionalStreamingServicesExpanded);
+    return get(royaltiesPercentage);
   },
 });

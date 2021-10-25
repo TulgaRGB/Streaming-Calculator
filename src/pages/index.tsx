@@ -9,6 +9,7 @@ import { Support } from "../components/Support/Support";
 import { StreamingServiceReset } from "../higherOrderComponents/StreamingServiceReset";
 import styles from "./index.module.css";
 import AdditionalStreamingServices from "../components/AdditionalStreamingServices/AdditionalStreamingServices";
+import { RoyaltiesPercentage } from "../components/RoyaltiesPercentage/RoyaltiesPercentage";
 
 export default function Home(): React.ReactNode {
   return (
@@ -45,6 +46,7 @@ export default function Home(): React.ReactNode {
           </div>
         </AdditionalStreamingServices>
 
+        <RoyaltiesPercentage />
         <Result />
       </div>
 
