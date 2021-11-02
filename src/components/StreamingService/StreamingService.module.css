@@ -121,6 +121,7 @@
   align-items: center;
 }
 
-.streamingService > :first-child {
+.image {
   margin-right: 12px;
+  display: flex;
 }

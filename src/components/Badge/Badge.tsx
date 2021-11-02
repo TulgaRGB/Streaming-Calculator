@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import styles from "./Badge.module.css";
 
 interface Props {
@@ -10,7 +11,7 @@ interface Props {
 export function Badge(props: Props): React.ReactElement {
   return (
     <div className={styles.badge}>
-      <img
+      <Image
         src={props.logo}
         width="24px"
         height="24px"

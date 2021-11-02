@@ -9,7 +9,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export default function AdditionalStreamingServices({ children }: Props) {
+export function AdditionalStreamingServices({ children }: Props) {
   const [isExpanded, setIsExpanded] = useRecoilState(
     additionalStreamingServicesExpanded
   );

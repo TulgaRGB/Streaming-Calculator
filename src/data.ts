@@ -10,42 +10,42 @@ export const streamingServices: StreamingService[] = [
   {
     name: "Spotify",
     rate: 0.00348,
-    logo: "./assets/images/spotify.svg",
+    logo: "/assets/images/spotify.svg",
   },
   {
     name: "Apple Music",
     rate: 0.00675,
-    logo: "./assets/images/apple-music.svg",
+    logo: "/assets/images/apple-music.svg",
   },
   {
     name: "Tidal",
     rate: 0.00876,
-    logo: "./assets/images/tidal.svg",
+    logo: "/assets/images/tidal.svg",
   },
   {
     name: "Deezer",
     rate: 0.00562,
-    logo: "./assets/images/deezer.svg",
+    logo: "/assets/images/deezer.svg",
   },
   {
     name: "Amazon Music",
     rate: 0.00426,
-    logo: "./assets/images/amazon-music.svg",
+    logo: "/assets/images/amazon-music.svg",
   },
   {
     name: "Youtube Music",
     rate: 0.00735,
-    logo: "./assets/images/youtube-music.svg",
+    logo: "/assets/images/youtube-music.svg",
   },
   {
     name: "Pandora",
     rate: 0.00133,
-    logo: "./assets/images/pandora.png",
+    logo: "/assets/images/pandora.png",
   },
   {
     name: "Napster",
     rate: 0.01682,
-    logo: "./assets/images/napster.svg",
+    logo: "/assets/images/napster.svg",
   },
 ];
 

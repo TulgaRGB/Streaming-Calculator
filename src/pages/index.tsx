@@ -7,9 +7,9 @@ import { paragraphs, streamingServices } from "../data";
 import { Widget } from "../components/Widget/Widget";
 import { Support } from "../components/Support/Support";
 import { StreamingServiceReset } from "../higherOrderComponents/StreamingServiceReset";
-import styles from "./index.module.css";
-import AdditionalStreamingServices from "../components/AdditionalStreamingServices/AdditionalStreamingServices";
+import { AdditionalStreamingServices } from "../components/AdditionalStreamingServices/AdditionalStreamingServices";
 import { RoyaltiesPercentage } from "../components/RoyaltiesPercentage/RoyaltiesPercentage";
+import styles from "./index.module.css";
 
 export default function Home(): React.ReactNode {
   return (
@@ -34,7 +34,10 @@ export default function Home(): React.ReactNode {
                 return null;
               }
               return (
-                <StreamingServiceReset name={streaming.name}>
+                <StreamingServiceReset
+                  name={streaming.name}
+                  key={streaming.name}
+                >
                   <StreamingService
                     {...streaming}
                     key={streaming.name}

@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
   additionalStreamingServicesExpanded,
@@ -26,7 +27,7 @@ export function StreamingService(props: Props): React.ReactElement {
     if (props.reset && amountInput.current) {
       amountInput.current.value = "";
     }
-  }, [isExpanded.isExpanded]);
+  }, [isExpanded.isExpanded, props.reset]);
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
     event.target.value = event.target.value.replace(/\D+/g, "");
@@ -61,12 +62,14 @@ export function StreamingService(props: Props): React.ReactElement {
       onBlur={() => setIsFocused(false)}
     >
       <div className={styles.streamingService}>
-        <img
-          src={props.logo}
-          width="24px"
-          height="24px"
-          alt={`${props.name} - logo`}
-        />
+        <div className={styles.image}>
+          <Image
+            src={props.logo}
+            width="24px"
+            height="24px"
+            alt={`${props.name} - logo`}
+          />
+        </div>
         {props.name}
       </div>
       <div className={styles.underline}>

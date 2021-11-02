@@ -24,7 +24,7 @@ export function CurrencyConverter(): React.ReactElement {
 
   useEffect(() => {
     setActiveCurrency(activeCurrencyLocalStorage);
-  }, []);
+  }, [setActiveCurrency, activeCurrencyLocalStorage]);
 
   function getRate(name: Currency) {
     if (data === null) {
