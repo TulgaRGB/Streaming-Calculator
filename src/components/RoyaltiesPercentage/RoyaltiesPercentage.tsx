@@ -10,16 +10,14 @@ export function RoyaltiesPercentage() {
   const hasChangedOnce = React.useRef<boolean>(false);
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    if (event.target.value.includes("-")) {
-      event.target.value = event.target.value.replace("-", "");
-    }
+    event.target.value = event.target.value.replace("-", "");
+    event.target.value = event.target.value.replace(/^(0+)/g, "");
 
     if (+event.target.value > 100) {
       event.target.value = String(100);
     }
 
     event.target.value = event.target.value.substring(0, 3);
-
     setPercentage(Number(event.target.value));
   }
 
@@ -27,7 +25,7 @@ export function RoyaltiesPercentage() {
     if (inputRef.current === null) {
       return;
     }
-    // inputRef.current.value = "100";
+
     inputRef.current.focus();
     if (!hasChangedOnce.current) {
       hasChangedOnce.current = true;
