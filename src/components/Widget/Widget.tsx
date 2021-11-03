@@ -28,7 +28,6 @@ export function Widget(): React.ReactElement {
     if (event.target.value.includes("-")) {
       event.target.value = event.target.value.replace("-", "");
     }
-
     setValue(event.target.value);
   }
 
@@ -50,16 +49,14 @@ export function Widget(): React.ReactElement {
         {currencyMapping(currency.symbol)}?
       </h3>
       <div className={styles.streamingServices}>
-        {streamingServices.map((streamingService) => {
-          return (
-            <Badge
-              name={streamingService.name}
-              amount={getAmount(streamingService.rate * currency.rate)}
-              logo={streamingService.logo}
-              key={streamingService.name}
-            />
-          );
-        })}
+        {streamingServices.map((streamingService) => (
+          <Badge
+            name={streamingService.name}
+            amount={getAmount(streamingService.rate * currency.rate)}
+            logo={streamingService.logo}
+            key={streamingService.name}
+          />
+        ))}
       </div>
     </>
   );

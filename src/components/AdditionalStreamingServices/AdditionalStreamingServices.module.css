@@ -18,7 +18,14 @@
 
 .icon {
     color: #85e4c6;
+    transition: color 0.3s, transform 0.3s;
 }
+
+.icon:hover {
+    color: #56e3b2;
+    transform: rotate(90deg);
+}
+
 
 .children {
     max-height: 0;

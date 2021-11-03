@@ -5,7 +5,8 @@ import { FiPercent } from "react-icons/fi";
 import styles from "./RoyaltiesPercentage.module.css";
 
 export function RoyaltiesPercentage() {
-  const [, setPercentage] = useRecoilState(royaltiesPercentage);
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  const [percentage, setPercentage] = useRecoilState(royaltiesPercentage);
   const hasChangedOnce = React.useRef<boolean>(false);
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -22,21 +23,27 @@ export function RoyaltiesPercentage() {
     setPercentage(Number(event.target.value));
   }
 
-  function handleFocus(event: React.ChangeEvent<HTMLInputElement>): void {
-    event.target.placeholder = "0";
+  function handleFocus(): void {
+    if (inputRef.current === null) {
+      return;
+    }
+    // inputRef.current.value = "100";
+    inputRef.current.focus();
     if (!hasChangedOnce.current) {
       hasChangedOnce.current = true;
-      setPercentage(0);
+      setPercentage(100);
     }
   }
 
   return (
     <h4 className={styles.container}>
-      <FiPercent size={"24px"} className={styles.icon} />
+      <FiPercent size={"30px"} className={styles.icon} onClick={handleFocus} />
       You get
       <input
+        ref={inputRef}
         className={styles.input}
         type="number"
+        value={percentage}
         pattern="^[0-9]{3}"
         min="0"
         max="100"
