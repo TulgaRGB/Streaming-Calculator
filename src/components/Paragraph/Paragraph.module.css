@@ -33,6 +33,10 @@
   margin-left: 8px;
 }
 
+.icon:hover {
+  color: #85e4c6;
+}
+
 .iconClicked {
   transform: rotate(0);
   color: #85e4c6;

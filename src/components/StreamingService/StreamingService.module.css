@@ -11,12 +11,14 @@
   margin: auto;
 }
 
+
 @media (max-width: 520px) {
   .container,
   .altContainer {
     width: inherit;
   }
 }
+
 .altContainer {
   padding: 11px 17px;
   box-sizing: content-box;
@@ -72,9 +74,9 @@
   left:0;
 }
 
-.underline:hover::after,
+.container:hover  .underline::after,
 .underline:active::after,
-.underline:focus-within::after {
+.underline:focus-within::after{
   transform: scaleX(1);
 }
 

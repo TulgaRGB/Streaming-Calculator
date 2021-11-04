@@ -21,7 +21,7 @@ export function StreamingService(props: Props): React.ReactElement {
   const isExpanded = useRecoilValue(additionalStreamingServicesExpanded);
   const [isFocused, setIsFocused] = useState<boolean>(false);
   const amountInput = useRef<HTMLInputElement>(null);
-  const placeHolder: string = "enter streams";
+  const placeHolder = "enter streams";
 
   React.useEffect(() => {
     if (props.reset && amountInput.current) {
@@ -57,8 +57,8 @@ export function StreamingService(props: Props): React.ReactElement {
 
   return (
     <div
-      onClick={handleFocus}
       className={style}
+      onClick={handleFocus}
       onBlur={() => setIsFocused(false)}
     >
       <div className={styles.streamingService}>

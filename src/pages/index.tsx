@@ -13,56 +13,60 @@ import styles from "./index.module.css";
 
 export default function Home(): React.ReactNode {
   return (
-    <main className={styles.page}>
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <HeaderMemoed />
-        </div>
-        <div className={styles.streamingsContainer}>
-          {streamingServices.map((streaming, index) => {
-            if (index > 3) {
-              return null;
-            }
-            return <StreamingService {...streaming} key={streaming.name} />;
-          })}
-        </div>
-
-        <AdditionalStreamingServices>
+    <>
+      <main className={styles.page}>
+        <div className={styles.container}>
+          <div className={styles.header}>
+            <HeaderMemoed />
+          </div>
           <div className={styles.streamingsContainer}>
             {streamingServices.map((streaming, index) => {
-              if (index < 4) {
+              if (index > 3) {
                 return null;
               }
-              return (
-                <StreamingServiceReset
-                  name={streaming.name}
-                  key={streaming.name}
-                >
-                  <StreamingService
-                    {...streaming}
-                    key={streaming.name}
-                    reset={true}
-                  />
-                </StreamingServiceReset>
-              );
+              return <StreamingService {...streaming} key={streaming.name} />;
             })}
           </div>
-        </AdditionalStreamingServices>
 
-        <RoyaltiesPercentage />
-        <Result />
-      </div>
+          <AdditionalStreamingServices>
+            <div className={styles.streamingsContainer}>
+              {streamingServices.map((streaming, index) => {
+                if (index < 4) {
+                  return null;
+                }
+                return (
+                  <StreamingServiceReset
+                    name={streaming.name}
+                    key={streaming.name}
+                  >
+                    <StreamingService
+                      {...streaming}
+                      key={streaming.name}
+                      reset={true}
+                    />
+                  </StreamingServiceReset>
+                );
+              })}
+            </div>
+          </AdditionalStreamingServices>
 
-      <div className={styles.widget}>
-        <Widget />
-      </div>
+          <RoyaltiesPercentage />
+          <Result />
+        </div>
 
-      <div className={styles.paragraphs}>
-        {paragraphs.map((paragraph) => (
-          <Paragraph {...paragraph} key={paragraph.heading} />
-        ))}
-      </div>
-      <Support />
-    </main>
+        <div className={styles.widget}>
+          <Widget />
+        </div>
+
+        <div className={styles.paragraphs}>
+          {paragraphs.map((paragraph) => (
+            <Paragraph {...paragraph} key={paragraph.heading} />
+          ))}
+        </div>
+      </main>
+      <footer>
+        <Support />
+      </footer>
+    </>
   );
 }
