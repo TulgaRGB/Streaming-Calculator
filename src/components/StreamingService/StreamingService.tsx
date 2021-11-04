@@ -31,6 +31,7 @@ export function StreamingService(props: Props): React.ReactElement {
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
     event.target.value = event.target.value.replace(/\D+/g, "");
+    event.target.value = event.target.value.replace(/^(0+)(\d+)/g, "$2");
 
     setCount({
       name: props.name,
