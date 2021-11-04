@@ -26,6 +26,7 @@ export default function MyApp({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>
           Estimate your earnings (2021 update) | Music Streaming Calculator
         </title>
