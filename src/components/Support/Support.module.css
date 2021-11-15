@@ -1,8 +1,8 @@
 .supportLink {
   font-size: 14px;
   color: white;
-  margin: 48px 0 24px 0;
-  text-align: center;
+  margin-top: 48px;
+  text-align: left;
 }
 
 .button {
@@ -13,4 +13,14 @@
   color: white;
   font-weight: 400;
   text-decoration: underline;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.flex >:first-child {
+  margin-right: 8px
 }
