@@ -7,12 +7,18 @@ interface Data {
     EUR: number;
   };
 }
-export function UseFetchData(endpoint: string) {
+export function useFetchData(endpoint: string) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [data, setData] = useState<Data | null>(null);
 
   useEffect(() => {
+    // do not fetch data during development
+    if (window.location.origin.match(/localhost/)) {
+      setData(null);
+      return;
+    }
+
     fetch(endpoint)
       .then((response) => {
         setLoading(true);
