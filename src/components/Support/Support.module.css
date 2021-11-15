@@ -1,12 +1,12 @@
 .supportLink {
   font-size: 14px;
   color: white;
-  margin-top: 48px;
+  margin: 48px 24px 24px 24px;
   text-align: left;
 }
 
 .button {
-  display: inline-block;
+  display: inline;
 }
 
 .button a {
