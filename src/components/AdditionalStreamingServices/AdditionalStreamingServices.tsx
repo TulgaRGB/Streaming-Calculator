@@ -4,6 +4,7 @@ import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 import { additionalStreamingServicesExpanded } from "../../../atoms/atom";
 import { useRecoilState } from "recoil";
 import styles from "./AdditionalStreamingServices.module.css";
+import { useEffect } from "react";
 
 interface Props {
   children: React.ReactNode;

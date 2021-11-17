@@ -3,6 +3,8 @@ import Script from "next/script";
 import React from "react";
 import { RecoilRoot } from "recoil";
 import Head from "next/head";
+import { NavBar } from "../components/NavBar/NavBar";
+import Layout from "../components/Layout/Layout";
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
@@ -67,7 +69,9 @@ export default function MyApp({ Component, pageProps }) {
       />
 
       <RecoilRoot>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </RecoilRoot>
     </>
   );
