@@ -1,85 +1,63 @@
 .navbar {
-    position: sticky;
-    top: 30px;
-    color: white;
-    width: 100px;
     display: flex;
-    flex-direction: column;
-    padding: 64px 0;
+    width: 100%;
+    padding: 12px 0;
+    justify-content: space-evenly;
 
-    border: 1px solid rgba(128, 128, 128, 0.164);
-    background: rgba(11, 20, 17, 0.95);
-    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2),
-    0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 28px;
-}
+    background-color: #0d1915;
+    border-radius: 40px 40px 0 0;
+    filter:drop-shadow(0 -5px 10px rgba(0, 0, 0, 0.1));
 
-.navbar > * + * {
-    margin-top: 36px;
+    box-shadow: 0 -1px 2px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2),
+    0 16px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .header {
-    margin:  0 auto 40px auto;
-    height: 25px;
-    font-size: 19px;
-    display: flex;
-}
-
-.image {
-    margin-top: 3px;
-    background: url("/assets/images/logo.png") no-repeat center;
-    background-size: cover;
-    height: 40px;
-    width: 41px;
-}
-
-.link {
-    margin: auto;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    display: flex;
-    gap: 11px;
-    align-items: center;
-    transition: transform 0.2s, border-color 0.2s;
-    box-sizing: border-box;
-    border-left: 2px solid transparent;
-}
-
-.link.active {
-    border-left: 2px solid #85e4c6;
-}
-
-.link:not(.active):hover {
-    transform: translateX(2px);
-}
-
-.linkText {
     display: none;
 }
 
 @media (min-width: 870px) {
+    .navbar {
+        position: sticky;
+        top: 30px;
+        color: white;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        padding: 64px 0;
+
+        border: 1px solid rgba(128, 128, 128, 0.164);
+        background: rgba(11, 20, 17, 0.92);
+        box-shadow: 0 1px 2px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2),
+        0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 28px;
+    }
 
     .header {
-        margin-left: 36px;
+        height: 25px;
+        font-size: 19px;
+        display: flex;
+        margin: 0 auto 40px 36px;
     }
 
     .image {
+        margin-top: 3px;
+        background: url("/assets/images/logo.png") no-repeat center;
+        background-size: cover;
+        height: 40px;
+        width: 41px;
         margin-right: 8px;
-        height: 29px;
-        width: 29px;
     }
 
     .navbar {
         width: 210px;
     }
 
-    .linkText {
-        display: revert;
+    .navbar > * + * {
+        margin-top: 36px;
     }
 
-    .link {
-        padding-left: 36px;
-    }
 }
 

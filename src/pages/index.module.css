@@ -6,24 +6,17 @@
   padding: 1px;
 }
 
-.container,
-.paragraphs > * {
+.container {
   border: 1px solid rgba(128, 128, 128, 0.164);
-  background: rgba(11, 20, 17, 0.95);
+  background: rgba(11, 20, 17, 0.92);
   box-shadow: 0 1px 2px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2),
     0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2),
     0 16px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
   border-radius: 28px;
   color: white;
+  padding: 34px;
 }
 
-.container {
-  padding: 24px 16px;
-}
-
-.paragraphs > * {
-  padding: 18px;
-}
 
 .streamingsContainer > * {
   border-radius: 26px;
@@ -38,28 +31,13 @@
   margin-top: 16px;
 }
 
-.container,
-.paragraphs > * {
-  padding: 34px;
-}
-
 .header {
   margin-top: 4px;
   margin-bottom: 42px;
 }
 
-/* Paragraph */
-.paragraphs {
-  margin-top: 40px;
-}
-
-.paragraphs > * {
-  margin-bottom: 24px;
-}
-
 @media (max-width: 520px) {
-  .container,
-  .paragraphs > * {
+  .container{
     padding: 22px;
   }
 
