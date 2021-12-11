@@ -1,0 +1,72 @@
+.featured {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 36px;
+}
+
+.imageContainer {
+    overflow: hidden;
+    flex-basis: 60%;
+    aspect-ratio: 16/10;
+    border-radius: 8px;
+    flex-grow: 1;
+}
+
+.image {
+    background-color: #29564696;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.25s ease;
+    object-fit: cover;
+}
+
+.image:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.featured .description {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+}
+
+.secondary {
+    display: flex;
+    flex-direction: column;
+}
+
+.secondary .description {
+    margin-top: 18px;
+}
+
+:is(.secondary .description, .featured .description)> * + * {
+    margin-top: 10px;
+}
+
+.date {
+    font-size: 10px;
+    color: rgb(66, 65, 65);
+}
+
+.featured .heading {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.secondary .heading {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.subTitle {
+    font-size: 13px;
+    color: rgba(66, 65, 65, 0.938);
+}
+
+.featured, .secondary {
+    cursor: pointer;
+}

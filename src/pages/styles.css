@@ -19,8 +19,9 @@ body {
   background-color: rgb(53, 112, 92);
 }
 
-* {
+body > * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 input {
