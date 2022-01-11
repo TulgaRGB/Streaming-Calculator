@@ -1,8 +1,8 @@
-import "./styles.css";
-import Script from "next/script";
 import React from "react";
-import { RecoilRoot } from "recoil";
+import Script from "next/script";
 import Head from "next/head";
+import { RecoilRoot } from "recoil";
+import "./styles.css";
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
@@ -16,7 +16,7 @@ export default function MyApp({ Component, pageProps }) {
         />
         <meta
           name="keywords"
-          content="Streaming, Music, Stream, Royalty, Earnings, Revenue, Tool, Calculator, 2021"
+          content="Streaming, Music, Stream, Royalty, Earnings, Revenue, Tool, Calculator, 2022"
         />
         <link
           rel="preload"
@@ -31,7 +31,7 @@ export default function MyApp({ Component, pageProps }) {
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
         <title>
-          Estimate your earnings (2021 update) | Music Streaming Calculator
+          Estimate your earnings (2022 update) | Music Streaming Calculator
         </title>
       </Head>
 
